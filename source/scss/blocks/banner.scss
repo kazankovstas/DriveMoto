@@ -1,0 +1,161 @@
+.banner {
+  margin-bottom: 77px;
+}
+
+.banner__inner {
+  max-width: 1240px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.banner__slider-list {
+  max-width: 870px;
+}
+
+.banner__slider-item {
+}
+
+.banner__image {
+  // width: 320px;
+  height: auto;
+  object-fit: cover;
+  vertical-align: top;
+  @media (min-width: 768px) {
+    // width: 433px;
+  }
+  @media (min-width: 1200px) {
+    // width: 870px;
+    min-height: 400px;
+  }
+}
+
+// ---------------------------------- sale-item
+.sale-item {
+  width: 265px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  border-radius: 3px;
+  overflow: hidden;
+  border: 1px solid #cdcdcd;
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0px 0px 8px rgba($blue, 0.8);
+  }
+}
+
+// ---------------------------------- sale-item__top
+.sale-item__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.sale-item__name {
+  background-color: $blue;
+  color: $white;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 8px 20px;
+  font-family: "Proxima Nova";
+}
+
+.sale-item__price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 4px;
+}
+
+.sale-item__price-current {
+  font-family: "Barlow";
+  font-weight: 700;
+  font-size: 27px;
+  color: $blue;
+}
+
+.sale-item__price-old {
+  display: inline-block;
+  padding: 2px 5px;
+  font-family: "Barlow";
+  color: $light-gray;
+  background-image: url(../img/icon/line.svg);
+  background-repeat: no-repeat;
+}
+
+.sale-item__image {
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.sale-item__title {
+  margin: 5px auto 7px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+// ---------------------------------- sale-item__bottom
+.sale-item__bottom {
+  background-color: $gray-bg;
+  padding: 25px 20px;
+}
+
+.sale-item__description {
+  font-size: 18px;
+  span {
+    font-weight: 700;
+    color: $blue;
+  }
+}
+
+// ---------------------------------- slick-slider
+.slick-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.banner-btn {
+  background-color: transparent;
+  color: $gray;
+  border: none;
+  cursor: pointer;
+}
+
+.banner-btn__left {
+  left: 20px;
+}
+
+.banner-btn__right {
+  right: 20px;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.slick-dots li {
+  display: inline-block;
+  padding: 0 5px;
+}
+
+.slick-dots button {
+  padding: 0;
+  font-size: 0;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 1px solid $white;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.slick-active button {
+  background-color: $white;
+}

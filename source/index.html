@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Drive Moto Project by Stanislav Kazankov"
+    />
+    <title>Drive Moto</title>
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="img/favicon/apple.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link
+      rel="preload"
+      href="fonts/SFProDisplay-Regular.woff2"
+      type="font/woff2"
+      as="font"
+    />
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+      defer
+    ></script>
+    <script src="js/libs.min.js" defer></script>
+    <script src="js/slick.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body class="page__body">
+    <div class="page__wrapper grid">
+      <header class="header">
+        <div class="header__top">
+          <div class="header__top-inner">
+            <nav class="menu">
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Магазины</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Акции</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Доставка и оплата</a>
+                </li>
+              </ul>
+            </nav>
+            <a class="logo" href="#">
+              <svg width="80" height="76">
+                <use xlink:href="img/sprite.svg#logo"></use>
+              </svg>
+            </a>
+            <div class="header__column">
+              <a class="header__adress" href="#">
+                <svg width="24" height="30">
+                  <use xlink:href="img/sprite.svg#location"></use>
+                </svg>
+                <p>Москва, ул. Науки 25</p>
+              </a>
+              <ul class="user-list">
+                <li class="user-list__item">
+                  <a class="user-list__link" href="#">
+                    <svg width="24" height="22">
+                      <use xlink:href="img/sprite.svg#like"></use>
+                    </svg>
+                    <span class="visually-hidden">Избранное</span>
+                  </a>
+                </li>
+                <li class="user-list__item">
+                  <a class="user-list__link" href="#">
+                    <svg width="24" height="24">
+                      <use xlink:href="img/sprite.svg#user"></use>
+                    </svg>
+                    <span class="visually-hidden">Личный кабинет</span>
+                  </a>
+                </li>
+                <li class="user-list__item">
+                  <a class="user-list__link cart" href="#">
+                    <svg width="30" height="23">
+                      <use xlink:href="img/sprite.svg#cart"></use>
+                    </svg>
+                    <span class="visually-hidden">Корзина товаров</span>
+                    <p class="cart-number">1</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom">
+          <ul class="header__bottom-inner">
+            <li class="menu-categories__item">
+              <a href="#" class="menu-categories__link">Квадроциклы</a>
+            </li>
+            <li class="menu-categories__item">
+              <a href="#" class="menu-categories__link">Катера</a>
+            </li>
+            <li class="menu-categories__item">
+              <a href="#" class="menu-categories__link">Гидроциклы</a>
+            </li>
+            <li class="menu-categories__item">
+              <a href="#" class="menu-categories__link">Лодки</a>
+            </li>
+            <li class="menu-categories__item">
+              <a href="#" class="menu-categories__link">Вездеходы</a>
+            </li>
+            <li class="menu-categories__item">
+              <a href="#" class="menu-categories__link">Снегоходы</a>
+            </li>
+            <li class="menu-categories__item">
+              <a href="#" class="menu-categories__link">Двигатели</a>
+            </li>
+            <li class="menu-categories__item">
+              <a href="#" class="menu-categories__link">Запчасти</a>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <main class="main">
+        <section class="banner">
+          <div class="banner__inner">
+            <ul class="banner__slider-list">
+              <li class="banner__slider-item">
+                <a class="banner__slider-link" href="#">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                      srcset="
+                        img/slider-banner-1__desktop.webp    1x,
+                        img/slider-banner-1__desktop@2x.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        img/slider-banner-1__mobile.webp    1x,
+                        img/slider-banner-1__mobile@2x.webp 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        img/slider-banner-1__desktop.jpg    1x,
+                        img/slider-banner-1__desktop@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      class="banner__image"
+                      src="img/slider-banner-1__mobile.jpg"
+                      srcset="img/slider-banner-1__mobile@2x.jpg 2x"
+                      alt="Баннер с катером"
+                    />
+                  </picture>
+                </a>
+              </li>
+              <li class="banner__slider-item">
+                <a class="banner__slider-link" href="#">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                      srcset="
+                        img/slider-banner-1__desktop.webp    1x,
+                        img/slider-banner-1__desktop@2x.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        img/slider-banner-1__mobile.webp    1x,
+                        img/slider-banner-1__mobile@2x.webp 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        img/slider-banner-1__desktop.jpg    1x,
+                        img/slider-banner-1__desktop@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      class="banner__image"
+                      src="img/slider-banner-1__mobile.jpg"
+                      srcset="img/slider-banner-1__mobile@2x.jpg 2x"
+                      alt="Баннер с катером"
+                    />
+                  </picture>
+                </a>
+              </li>
+              <li class="banner__slider-item">
+                <a class="banner__slider-link" href="#">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                      srcset="
+                        img/slider-banner-1__desktop.webp    1x,
+                        img/slider-banner-1__desktop@2x.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        img/slider-banner-1__mobile.webp    1x,
+                        img/slider-banner-1__mobile@2x.webp 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        img/slider-banner-1__desktop.jpg    1x,
+                        img/slider-banner-1__desktop@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      class="banner__image"
+                      src="img/slider-banner-1__mobile.jpg"
+                      srcset="img/slider-banner-1__mobile@2x.jpg 2x"
+                      alt="Баннер с катером"
+                    />
+                  </picture>
+                </a>
+              </li>
+              <li class="banner__slider-item">
+                <a class="banner__slider-link" href="#">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                      srcset="
+                        img/slider-banner-1__desktop.webp    1x,
+                        img/slider-banner-1__desktop@2x.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        img/slider-banner-1__mobile.webp    1x,
+                        img/slider-banner-1__mobile@2x.webp 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        img/slider-banner-1__desktop.jpg    1x,
+                        img/slider-banner-1__desktop@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      class="banner__image"
+                      src="img/slider-banner-1__mobile.jpg"
+                      srcset="img/slider-banner-1__mobile@2x.jpg 2x"
+                      alt="Баннер с катером"
+                    />
+                  </picture>
+                </a>
+              </li>
+              <li class="banner__slider-item">
+                <a class="banner__slider-link" href="#">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                      srcset="
+                        img/slider-banner-1__desktop.webp    1x,
+                        img/slider-banner-1__desktop@2x.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        img/slider-banner-1__mobile.webp    1x,
+                        img/slider-banner-1__mobile@2x.webp 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        img/slider-banner-1__desktop.jpg    1x,
+                        img/slider-banner-1__desktop@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      class="banner__image"
+                      src="img/slider-banner-1__mobile.jpg"
+                      srcset="img/slider-banner-1__mobile@2x.jpg 2x"
+                      alt="Баннер с катером"
+                    />
+                  </picture>
+                </a>
+              </li>
+              <li class="banner__slider-item">
+                <a class="banner__slider-link" href="#">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                      srcset="
+                        img/slider-banner-1__desktop.webp    1x,
+                        img/slider-banner-1__desktop@2x.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        img/slider-banner-1__mobile.webp    1x,
+                        img/slider-banner-1__mobile@2x.webp 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        img/slider-banner-1__desktop.jpg    1x,
+                        img/slider-banner-1__desktop@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      class="banner__image"
+                      src="img/slider-banner-1__mobile.jpg"
+                      srcset="img/slider-banner-1__mobile@2x.jpg 2x"
+                      alt="Баннер с катером"
+                    />
+                  </picture>
+                </a>
+              </li>
+            </ul>
+            <a class="banner__sale-item sale-item" href="#">
+              <div class="sale-item__top">
+                <div class="sale-item__name">Акция</div>
+                <div class="sale-item__price">
+                  <p class="sale-item__price-current">190 000 &#8381;</p>
+                  <p class="sale-item__price-old">225 000 &#8381;</p>
+                </div>
+              </div>
+              <img
+                class="sale-item__image"
+                src="img/content/1.png"
+                width="125"
+                height="177"
+                alt="Изображение товара"
+              />
+              <h3 class="sale-item__title">
+                Лодочный мотор Suzuki&nbsp;DF9.9BRS
+              </h3>
+
+              <div class="sale-item__bottom">
+                <p class="sale-item__description">
+                  Акция действует до <span>31.08.2020</span>
+                </p>
+              </div>
+            </a>
+          </div>
+        </section>
+      </main>
+    </div>
+    <footer class="footer"></footer>
+  </body>
+</html>
