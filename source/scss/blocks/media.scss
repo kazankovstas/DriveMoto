@@ -114,6 +114,18 @@
 @media (max-width: 600px) {
   // --------------------------------- Banner
   .banner__slider-list {
+    max-width: 360px;
+  }
+
+  .banner__image {
+    max-width: 360px;
+    min-height: 190px;
+  }
+}
+
+@media (max-width: 359px) {
+  // --------------------------------- Banner
+  .banner__slider-list {
     max-width: 320px;
   }
 
