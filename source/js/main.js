@@ -29,5 +29,31 @@ $(function () {
 }
 
 {
-  document.querySelector("slick-list").tabIndex = -1;
+  const openMenuInfo = document.querySelector(".info__drop-down");
+  const menuInfo = document.querySelector(".info__list");
+  const iconInfo = document.querySelector(".info__icon");
+
+  openMenuInfo.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    openMenuInfo.classList.toggle("info__drop-down_active");
+    iconInfo.classList.toggle("info__icon_active");
+    openMenuInfo.classList.contains("info__drop-down_active")
+      ? menuInfo.classList.add("info__list_active")
+      : menuInfo.classList.remove("info__list_active");
+  });
+}
+
+{
+  const openMenuStore = document.querySelector(".store__drop-down");
+  const menuStore = document.querySelector(".store__list");
+  const iconStore = document.querySelector(".store__icon");
+
+  openMenuStore.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    openMenuStore.classList.toggle("store__drop-down_active");
+    iconStore.classList.toggle("store__icon_active");
+    openMenuStore.classList.contains("store__drop-down_active")
+      ? menuStore.classList.add("store__list_active")
+      : menuStore.classList.remove("store__list_active");
+  });
 }
