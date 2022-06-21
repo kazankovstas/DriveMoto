@@ -20,13 +20,14 @@
   height: auto;
   object-fit: cover;
   vertical-align: top;
-  @media (min-width: 768px) {
-    // width: 433px;
-  }
-  @media (min-width: 1200px) {
-    // width: 870px;
-    min-height: 400px;
-  }
+  max-width: 100%;
+  // @media (min-width: 768px) {
+  //   // width: 433px;
+  // }
+  // @media (min-width: 1200px) {
+  //   // width: 870px;
+  //   min-height: 400px;
+  // }
 }
 
 // ---------------------------------- sale-item
@@ -115,6 +116,14 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  transition: all 0.2s ease-in;
+  &:hover {
+    color: $blue;
+  }
+  &:focus-visible {
+    outline: none;
+    color: rgba($blue, 0.8);
+  }
 }
 
 .banner-btn {
@@ -126,6 +135,7 @@
 
 .banner-btn__left {
   left: 20px;
+  z-index: 2;
 }
 
 .banner-btn__right {
@@ -158,4 +168,7 @@
 
 .slick-active button {
   background-color: $white;
+  &:focus-visible {
+    background-color: yellow;
+  }
 }

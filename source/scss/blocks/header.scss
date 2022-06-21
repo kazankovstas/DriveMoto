@@ -16,6 +16,10 @@
   font-weight: 700;
 }
 
+.menu {
+  max-width: 500px;
+}
+
 .menu__list {
   display: flex;
   flex-wrap: wrap;
@@ -186,8 +190,8 @@
 .cart-number {
   content: "";
   position: absolute;
-  bottom: -3px;
-  right: -14px;
+  bottom: 0px;
+  right: -9px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -199,4 +203,136 @@
   color: $white;
   background-color: $blue;
   text-align: center;
+}
+
+// ------------------------------ Button
+.main-nav__toggle {
+  position: relative;
+  // display: block;
+  // border: none;
+  // padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  padding: 24px;
+  width: 34px;
+  height: 34px;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0px 0px 8px rgba($blue, 0.8);
+    border-radius: 12px;
+    color: $blue;
+    .main-nav__menu,
+    .main-nav__menu::before,
+    .main-nav__menu::after {
+      background-color: $blue;
+    }
+  }
+  @media (min-width: 968px) {
+    display: none;
+  }
+}
+
+.main-nav__menu {
+  position: absolute;
+  display: block;
+  width: 34px;
+  height: 3px;
+  border-radius: 20px;
+  background-color: $black;
+  transition-duration: 0.25s;
+  transition-delay: 0.25s;
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 34px;
+    left: 0;
+    border-radius: 20px;
+    background-color: $black;
+    transition-duration: 0.25s;
+    transition: transform 0.25s, top 0.25s 0.25s;
+  }
+  &::before {
+    top: -10px;
+  }
+  &::after {
+    top: 10px;
+  }
+}
+
+.main-nav__toggle.main-nav__toggle_active {
+  .main-nav__menu {
+    transition-duration: 0.1s;
+    transition-delay: 0.25s;
+    background: transparent;
+    &::before {
+      transition: top 0.25s, transform 0.25s 0.25s;
+      top: 0px;
+      transform: rotateZ(-45deg);
+    }
+    &::after {
+      transition: top 0.4s, transform 0.25s 0.25s;
+      top: 0px;
+      transform: rotateZ(45deg);
+    }
+  }
+}
+
+// ---------------------------------------- menu-mobile
+.menu-mobile {
+  display: none;
+  position: absolute;
+  transform: translateX(-110%);
+  width: 243px;
+  z-index: 10;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  transition: 0.5s ease-in;
+  background-color: $white;
+  &_active {
+    transform: translateX(0);
+  }
+}
+
+.menu-mobile__item {
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.menu-mobile__link {
+  display: block;
+  padding: 20px 0 10px 52px;
+  font-size: 20px;
+  transition: all 0.2s ease-in;
+  &:hover {
+    background-color: rgba($blue, 0.5);
+    color: $white;
+  }
+  &:focus-visible {
+    outline: none;
+    background-color: rgba($blue, 0.5);
+    color: $white;
+  }
+}
+
+.menu-mobile__image {
+  position: absolute;
+  left: 11px;
+  bottom: 12px;
+}
+
+// ---------------------------- scroll-menu
+.scroll-menu {
+  display: none;
+  background-color: $gray-bg;
+}
+
+.scroll-menu__list {
+  padding: 5px 0;
 }
