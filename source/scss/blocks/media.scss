@@ -136,4 +136,25 @@
 }
 
 @media (max-width: 420px) {
+  .search__content-input {
+    border-radius: 0;
+  }
+
+  .search__content-button {
+    margin: 0;
+    font-size: 0;
+    line-height: 0;
+    border-radius: 0;
+    color: transparent;
+    background-color: $gray-bg;
+    background-image: url(../../img/sprite/search.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    &:hover {
+      background-color: rgba($blue, 0.3);
+    }
+    &:active {
+      background-color: rgba($blue, 0.6);
+    }
+  }
 }

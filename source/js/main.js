@@ -1,4 +1,5 @@
 $(function () {
+  // --------------------------------------------------------------------------- Слайдер-баннер
   $(".banner__slider-list").slick({
     dots: true,
     prevArrow:
@@ -14,9 +15,21 @@ $(function () {
       },
     ],
   });
+
+  // ------------------------------------------------------------------------------ Табы поиска
+  $(".search__tabs-item").on("click", function (e) {
+    e.preventDefault();
+
+    $(".search__tabs-item").removeClass("search__tabs-item--active");
+    $(".search__content-item").removeClass("search__content-item--active");
+
+    $(this).addClass("search__tabs-item--active");
+    $($(this).attr("href")).addClass("search__content-item--active");
+  });
 });
 
 {
+  // ------------------------------------------------------------------------------- Меню-бургер
   const openMenu = document.querySelector(".main-nav__toggle");
   const menu = document.querySelector(".menu-mobile");
 
@@ -29,6 +42,7 @@ $(function () {
 }
 
 {
+  // ------------------------------------------------------------------------ Дроп-меню Футер-Информация
   const openMenuInfo = document.querySelector(".info__drop-down");
   const menuInfo = document.querySelector(".info__list");
   const iconInfo = document.querySelector(".info__icon");
@@ -44,6 +58,7 @@ $(function () {
 }
 
 {
+  // -------------------------------------------------------------------------- Дроп-меню Футер-Интернет магазин
   const openMenuStore = document.querySelector(".store__drop-down");
   const menuStore = document.querySelector(".store__list");
   const iconStore = document.querySelector(".store__icon");

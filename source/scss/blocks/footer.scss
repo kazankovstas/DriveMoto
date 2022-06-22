@@ -3,15 +3,48 @@
 }
 
 .footer__wrapper {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
   padding: 42px 20px 30px;
 }
 
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding-bottom: 60px;
+}
+
+.footer-bottom {
+  text-align: center;
+}
+
+.footer-bottom__link {
+  padding: 4px 8px;
+  font-size: 12px;
+  transition: all 0.2s ease-in;
+  &:not(:last-child) {
+    margin-right: 81px;
+  }
+  &:hover {
+    color: $blue;
+  }
+  &:active {
+    color: $blue-down;
+  }
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0px 0px 2px rgba($blue, 0.8) inset;
+    color: $blue;
+    border-radius: 3px;
+  }
+}
+
 // ----------------------------- mailing
+.mailing {
+  max-width: 280px;
+}
+
 .mailing__title {
   max-width: 230px;
   margin-bottom: 34px;
@@ -48,7 +81,7 @@
   font-size: 11px;
   line-height: 13px;
   font-weight: 600;
-  letter-spacing: 12%;
+  letter-spacing: 0.12em;
   transition: all 0.2s ease-in;
   cursor: pointer;
   &:hover {
@@ -67,6 +100,11 @@
 }
 
 // ----------------------------------- info, store
+.footer__info,
+.footer__store {
+  max-width: 200px;
+}
+
 .footer-menu__icon {
   display: none;
 }
@@ -149,9 +187,17 @@
   }
 
   .footer__wrapper {
+    padding: 0;
+  }
+
+  .footer-top {
     flex-direction: column;
     gap: 0;
-    padding: 0;
+  }
+
+  .footer__info,
+  .footer__store {
+    max-width: 100%;
   }
 
   .mailing {
@@ -159,6 +205,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 100%;
     padding: 17px 10px 41px 10px;
     border-bottom: 2px solid $gray-bg;
     background-color: #f9f9fc;
@@ -251,9 +298,18 @@
   .store__icon_active {
     transform: rotate(180deg);
   }
-}
 
-// ------------------------------- Social
-.social {
-  padding: 40px 0 80px;
+  // ------------------------------- Social
+  .social {
+    padding: 40px 0 0 0;
+  }
+
+  // ------------------------------- Footer-Bottom
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 0 10px 60px 10px;
+  }
 }
