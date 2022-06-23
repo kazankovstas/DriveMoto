@@ -18,17 +18,17 @@
   }
 }
 
-.search__tabs-item--active {
+.search__tabs-item.tab--active {
   border-radius: 5px;
   background-color: $gray-bg;
   font-weight: 700;
 }
 
-.search__content-item {
+.tabs__content {
   display: none;
 }
 
-.search__content-item--active {
+.tabs__content--active {
   display: block;
 }
 

@@ -238,7 +238,7 @@
         </div>
       </header>
       <main class="main">
-        <section class="banner page-section">
+        <section class="banner page__section">
           <h2 class="visually-hidden">Баннер</h2>
           <div class="banner__inner">
             <ul class="banner__slider-list">
@@ -474,23 +474,21 @@
             </a>
           </div>
         </section>
-        <section class="search page-section">
+        <section class="search page__section">
           <h2 class="visually-hidden">Фильтр поиска</h2>
           <div class="search__inner">
             <div class="search__tabs tabs-wrapper">
-              <a
-                class="search__tabs-item search__tabs-item--active"
-                href="#tab-1"
+              <a class="tab search__tabs-item tab--active" href="#tab-1"
                 >Поиск по номеру</a
               >
-              <a class="search__tabs-item" href="#tab-2">Поиск по марке</a>
-              <a class="search__tabs-item" href="#tab-3"
+              <a class="tab search__tabs-item" href="#tab-2">Поиск по марке</a>
+              <a class="tab search__tabs-item" href="#tab-3"
                 >Поиск по названию товара</a
               >
             </div>
             <div class="seaarch__content">
               <div
-                class="search__content-item search__content-item--active"
+                class="search__content-item tabs__content tabs__content--active"
                 id="tab-1"
               >
                 <form
@@ -518,7 +516,7 @@
                   </button>
                 </form>
               </div>
-              <div class="search__content-item" id="tab-2">
+              <div class="search__content-item tabs__content" id="tab-2">
                 <form
                   class="search__content-form"
                   method="get"
@@ -544,7 +542,7 @@
                   </button>
                 </form>
               </div>
-              <div class="search__content-item" id="tab-3">
+              <div class="search__content-item tabs__content" id="tab-3">
                 <form
                   class="search__content-form"
                   method="get"
@@ -573,7 +571,7 @@
             </div>
           </div>
         </section>
-        <section class="categories page-section">
+        <section class="categories page__section">
           <h2 class="visually-hidden">Категории</h2>
           <div class="categories__wrapper">
             <ul class="categories__list">
@@ -814,6 +812,123 @@
             </ul>
           </div>
         </section>
+        <section class="products page__section">
+          <div class="products__wrapper">
+            <div class="tabs__wrapper">
+              <div class="tabs products__tabs">
+                <a class="tab products__tab tab--active" href="#">запчасти</a>
+                <a class="tab products__tab" href="#">моторы</a>
+                <a class="tab products__tab" href="#">шины </a>
+                <a class="tab products__tab" href="#">электроника</a>
+                <a class="tab products__tab" href="#">инструменты</a>
+                <a class="tab products__tab" href="#">аксессуары </a>
+              </div>
+              <div class="tabs__container products__container">
+                <div
+                  class="tabs__content products__content tabs__content--active"
+                ></div>
+                <div class="tabs__content products__content tabs__content">
+                  <div class="product-slider">
+                    <div class="product-slider__item">
+                      <div
+                        class="product-item__wrapper product-item__not-available"
+                      >
+                        <button
+                          class="product-item__favorite"
+                          type="button"
+                          aria-label="Добавить товар в избранное"
+                        >
+                          <svg
+                            class="product-item__icon"
+                            width="24"
+                            height="24"
+                          >
+                            <use xlink:href="img/sprite.svg#favorite"></use>
+                          </svg>
+                        </button>
+                        <button
+                          class="product-item__basket"
+                          type="button"
+                          aria-label="Добавить товар в корзину"
+                        >
+                          <svg width="30" height="23">
+                            <use xlink:href="img/sprite.svg#cart"></use>
+                          </svg>
+                        </button>
+                        <a class="product-item__notify-link" href="#"
+                          >Сообщить о поступлении</a
+                        >
+                        <a class="product-item product-item--sale" href="#">
+                          <p class="product-item__hover-text">
+                            посмотреть товар
+                          </p>
+                          <img
+                            class="product-item__image"
+                            src="img/content/images-product-1.png"
+                            alt="Водонепроницаемый
+                        Рюкзак"
+                          />
+                          <h4 class="product-item__title">
+                            Водонепроницаемый Рюкзак
+                          </h4>
+                          <p class="product-item__price price">9 800 &#8381;</p>
+                          <p class="product-item__notify-text">нет в наличии</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tabs__content products__content tabs__content"
+                ></div>
+                <div
+                  class="tabs__content products__content tabs__content"
+                ></div>
+                <div
+                  class="tabs__content products__content tabs__content"
+                ></div>
+                <div
+                  class="tabs__content products__content tabs__content"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="product-item__wrapper product-item__not-available">
+          <button
+            class="product-item__favorite"
+            type="button"
+            aria-label="Добавить товар в избранное"
+          >
+            <svg class="product-item__icon" width="24" height="24">
+              <use xlink:href="img/sprite.svg#favorite"></use>
+            </svg>
+          </button>
+          <button
+            class="product-item__basket"
+            type="button"
+            aria-label="Добавить товар в корзину"
+          >
+            <svg width="30" height="23">
+              <use xlink:href="img/sprite.svg#cart"></use>
+            </svg>
+          </button>
+          <a class="product-item__notify-link" href="#"
+            >Сообщить о поступлении</a
+          >
+          <a class="product-item product-item--sale" href="#">
+            <p class="product-item__hover-text">посмотреть товар</p>
+            <img
+              class="product-item__image"
+              src="img/content/images-product-1.png"
+              alt="Водонепроницаемый
+          Рюкзак"
+            />
+            <h4 class="product-item__title">Водонепроницаемый Рюкзак</h4>
+            <p class="product-item__price price">9 800 &#8381;</p>
+            <p class="product-item__notify-text">нет в наличии</p>
+          </a>
+        </div>
       </main>
     </div>
     <footer class="footer">
@@ -932,3 +1047,12 @@
     </footer>
   </body>
 </html>
+
+<!-- <div class="tabs__wrapper">
+  <div class="tabs">
+    <a class="tab tab--active" href="#"></a>
+  </div>
+  <div class="tabs__container">
+    <div class="tabs__content"></div>
+  </div>
+</div> -->

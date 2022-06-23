@@ -17,14 +17,18 @@ $(function () {
   });
 
   // ------------------------------------------------------------------------------ Табы поиска
-  $(".search__tabs-item").on("click", function (e) {
+  $(".tab").on("click", function (e) {
     e.preventDefault();
 
-    $(".search__tabs-item").removeClass("search__tabs-item--active");
-    $(".search__content-item").removeClass("search__content-item--active");
+    $(".tab").removeClass("tab--active");
+    $(".tabs__content").removeClass("tabs__content--active");
 
-    $(this).addClass("search__tabs-item--active");
-    $($(this).attr("href")).addClass("search__content-item--active");
+    $(this).addClass("tab--active");
+    $($(this).attr("href")).addClass("tabs__content--active");
+  });
+
+  $(".product-item__icon").on("click", function () {
+    $(".product-item__icon").toggleClass("product-item__icon--active");
   });
 });
 
@@ -41,8 +45,8 @@ $(function () {
   });
 }
 
+// ------------------------------------------------------------------------ Дроп-меню Футер-Информация
 {
-  // ------------------------------------------------------------------------ Дроп-меню Футер-Информация
   const openMenuInfo = document.querySelector(".info__drop-down");
   const menuInfo = document.querySelector(".info__list");
   const iconInfo = document.querySelector(".info__icon");
@@ -57,8 +61,8 @@ $(function () {
   });
 }
 
+// -------------------------------------------------------------------------- Дроп-меню Футер-Интернет магазин
 {
-  // -------------------------------------------------------------------------- Дроп-меню Футер-Интернет магазин
   const openMenuStore = document.querySelector(".store__drop-down");
   const menuStore = document.querySelector(".store__list");
   const iconStore = document.querySelector(".store__icon");
@@ -72,3 +76,17 @@ $(function () {
       : menuStore.classList.remove("store__list_active");
   });
 }
+
+// // -------------------------------------------------------------------------- Кнопка добавить в избранное
+// {
+//   {
+//     const btnLike = document.querySelector(".product-item__favorite");
+//     const btnLikeIcon = document.querySelector(".product-item__icon");
+
+//     btnLike.addEventListener("click", function () {
+//       btnLikeIcon.classList.contains("product-item__icon--active")
+//         ? btnLikeIcon.classList.remove("product-item__icon--active")
+//         : btnLikeIcon.classList.add("product-item__icon--active");
+//     });
+//   }
+// }
