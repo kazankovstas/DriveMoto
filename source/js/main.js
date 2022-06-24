@@ -20,8 +20,10 @@ $(function () {
   $(".tab").on("click", function (e) {
     e.preventDefault();
 
-    $(".tab").removeClass("tab--active");
-    $(".tabs__content").removeClass("tabs__content--active");
+    $($(this).siblings()).removeClass("tab--active");
+    $($(this).parent().siblings().find("div")).removeClass(
+      "tabs__content--active"
+    );
 
     $(this).addClass("tab--active");
     $($(this).attr("href")).addClass("tabs__content--active");
@@ -29,6 +31,16 @@ $(function () {
 
   $(".product-item__icon").on("click", function () {
     $(".product-item__icon").toggleClass("product-item__icon--active");
+  });
+
+  $(".product-slider").slick({
+    arrows: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    prevArrow:
+      '<button class="slick-btn product-slider__btn product-slider__btn_left"><svg width="16" height="29"><use xlink:href="img/sprite.svg#big-arrow-left-black"></use></svg></button>',
+    nextArrow:
+      '<button class="slick-btn product-slider__btn product-slider__btn_right"><svg width="16" height="29"><use xlink:href="img/sprite.svg#big-arrow-right-black"></use></svg></button>',
   });
 });
 

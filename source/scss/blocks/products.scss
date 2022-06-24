@@ -7,7 +7,13 @@
 .products__wrapper {
 }
 
+.products__title {
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+
 .tabs__wrapper {
+  margin-bottom: 35px;
 }
 
 .tabs {
@@ -20,9 +26,25 @@
 }
 
 .products__tab {
+  padding-bottom: 10px;
+  font-size: 15px;
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+  &:hover {
+    color: #000;
+  }
+  &:active {
+    color: rgba($color: #000000, $alpha: 0.8);
+  }
+  &:focus-visible {
+    outline: none;
+    border-bottom: 2px solid $blue;
+  }
 }
 
-.tab--active {
+.products__tab.tab--active {
+  border-bottom: 2px solid $blue;
 }
 
 .tabs__container {
@@ -77,6 +99,11 @@
   border: 1px solid #cdcdcd;
   border-radius: 3px;
   text-align: center;
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0px 0px 8px rgba($blue, 0.8);
+    color: $blue;
+  }
 }
 
 .product-item__favorite {
@@ -90,6 +117,13 @@
   outline: none;
   z-index: 5;
   cursor: pointer;
+  &:focus-visible {
+    outline: none;
+    transform: scale(1.1);
+    .product-item__icon {
+      color: $blue;
+    }
+  }
 }
 
 .product-item__icon {
@@ -187,6 +221,15 @@
   font-size: 16px;
   display: none;
   border-bottom: 1px solid $blue;
+  z-index: 9;
+  &:hover {
+    font-weight: 700;
+  }
+  &:focus-visible {
+    outline: none;
+    border-bottom: 2px solid black;
+    font-weight: 700;
+  }
 }
 
 .product-item__wrapper.product-item__not-available {
@@ -196,5 +239,47 @@
   }
   .product-item__notify-link {
     display: block;
+  }
+}
+
+.banner-bottom {
+  display: flex;
+}
+
+.banner-bottom__image {
+  width: 100%;
+}
+
+.banner-bottom__link {
+  width: 100%;
+}
+
+.product__more {
+  text-align: center;
+}
+
+.product__more-link {
+  padding: 16px 42px;
+  font-size: 15px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background-color: $gray-bg;
+  transition: all 0.2s ease-in;
+  &:hover {
+    box-shadow: 0px 0px 8px rgba($blue, 0.8);
+    color: $blue;
+    border-radius: 12px;
+  }
+  &:active {
+    box-shadow: 0px 0px 8px rgba($blue, 0.8);
+    background-color: rgba($blue, 0.6);
+    color: $white;
+    border-radius: 12px;
+  }
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0px 0px 8px rgba($blue, 0.8);
+    color: $blue;
+    border-radius: 12px;
   }
 }
