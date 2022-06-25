@@ -53,15 +53,21 @@
   cursor: pointer;
 }
 
-// .slick-active button {
-//   background-color: $white;
-//   &:focus-visible {
-//     background-color: yellow;
+.slick-dots .slick-active button {
+  background-color: $white;
+  &:focus-visible {
+    background-color: yellow;
+  }
+}
+
+// --------------------- Product
+// .products {
+//   .slick-slider {
+//     max-width: 1170px;
 //   }
 // }
 
-// --------------------- Product
-.products {
+.products-popular {
   .slick-slider {
     max-width: 1170px;
   }
@@ -85,4 +91,28 @@
 
 .slick-slide img {
   display: inline;
+}
+
+.product-slider {
+  .slick-dots {
+    bottom: -30px;
+    .slick-active {
+      button {
+        background-color: $blue;
+      }
+    }
+    button {
+      background-color: #c4c4c4;
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .tabs__wrapper {
+    margin-bottom: 45px;
+  }
+
+  .product-slider__btn_right {
+    right: 0;
+  }
 }
