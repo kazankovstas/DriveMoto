@@ -14,14 +14,16 @@
 }
 
 .tabs__wrapper {
-  margin-bottom: 35px;
+  // margin-bottom: 35px;
+  margin-bottom: 25px;
 }
 
 .tabs {
 }
 
 .products__tabs {
-  margin-bottom: 25px;
+  // margin-bottom: 25px;
+  margin-bottom: 8px;
 }
 
 .tab {
@@ -73,6 +75,8 @@
 
 .product-slider__item {
   width: 271px;
+  height: 442px;
+  padding: 16px 0 0 10px;
 }
 
 .product-item__wrapper {
@@ -264,10 +268,15 @@
 
 .banner-bottom__image {
   width: 100%;
+  vertical-align: top;
 }
 
 .banner-bottom__link {
   width: 100%;
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0px 0px 15px #ff34c0;
+  }
 }
 
 .product__more {
@@ -320,5 +329,9 @@
   .product__more {
     text-align: left;
     padding-left: 44px;
+  }
+
+  .product-slider__item {
+    padding: 16px 0 0 0;
   }
 }

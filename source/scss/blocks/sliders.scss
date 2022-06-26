@@ -75,9 +75,16 @@
 
 .product-slider__btn {
   background-color: transparent;
-  color: $gray;
+  color: $black;
   border: none;
   cursor: pointer;
+  &:hover {
+    color: $blue;
+  }
+  &:focus-visible {
+    outline: none;
+    color: rgba($blue, 0.8);
+  }
 }
 
 .product-slider__btn_left {
