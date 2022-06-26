@@ -1,0 +1,144 @@
+.catalog {
+}
+
+.catalog__title {
+  margin-bottom: 26px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+// ------------------------------------------- Filter
+.catalog__filter {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.catalog__filter-item {
+}
+
+.catalog__filter-item button {
+  padding: 5px 22px;
+  border: none;
+  background-color: $gray-bg;
+  color: rgba($black, 0.7);
+  border-radius: 3px;
+  margin-right: 8px;
+  line-height: 17px;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+}
+
+.catalog__filter-btn button {
+  border: none;
+  background-color: transparent;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.catalog__filter-btngrid {
+}
+
+.catalog__filter-btnline {
+}
+
+// ------------------------------------------- Inner
+.catalog__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog__left-column {
+}
+
+.catalog__right-column {
+}
+
+.catalog__inner-list {
+  display: grid;
+  grid-template-columns: repeat(3, 271px);
+  gap: 28px;
+  margin-bottom: 70px;
+}
+
+.catalog__inner-item {
+  width: 271px;
+  height: 403px;
+}
+
+.catalog-item {
+  width: 271px;
+  height: 403px;
+  padding: 52px 0px 31px;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.catalog-item__top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.catalog-item__bottom {
+  padding: 0 20px;
+}
+
+.catalog-item__image {
+  width: 250px;
+  height: 190px;
+  object-fit: contain;
+}
+
+// ----------------------------------------- Aside
+.catalog__inner-aside {
+  width: 290px;
+  height: 1330px;
+  background-color: #fdefef;
+}
+
+// ------------------------------------------ Pagination
+
+.pagination {
+  width: 100%;
+}
+
+.pagination__list {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination__item {
+  padding: 6px 12px;
+  // width: 39px;
+  // height: 39px;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Barlow";
+  color: #c4c4c4;
+  &--active {
+    color: $blue;
+    border: 2px solid $blue;
+    font-weight: 600;
+    cursor: default;
+  }
+  &:not(:last-child) {
+    margin-right: 4px;
+  }
+}
+
+.pagination__item a {
+  display: block;
+}
+
+// .catalog__page-link {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   width: 100%;
+//   height: 100%;
+// }
