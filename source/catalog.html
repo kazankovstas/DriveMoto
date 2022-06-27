@@ -242,7 +242,7 @@
           <div class="breadcrumbs__wrapper">
             <ul class="breadcrumbs__list">
               <li class="breadcrumbs__item">
-                <a class="breadcrumbs__link" href="#">Главная</a>
+                <a class="breadcrumbs__link" href="index.html">Главная</a>
               </li>
               <li class="breadcrumbs__item">
                 <a class="breadcrumbs__link" href="#">Гидроциклы</a>
@@ -295,7 +295,248 @@
           </div>
           <div class="catalog__inner">
             <div class="catalog__left-column">
-              <aside class="catalog__inner-aside"></aside>
+              <aside class="catalog__inner-aside aside-filter">
+                <h3 class="visually-hidden">Фильтр поиска</h3>
+                <form
+                  class="form"
+                  action="https://echo.htmlacademy.ru"
+                  method="get"
+                  target="_blank"
+                >
+                  <!-- --------------------------------------- checkbox ---- Наличие -->
+                  <fieldset>
+                    <a class="form__drop-down available__drop-down" href="#">
+                      <svg
+                        class="form__icon available__icon"
+                        width="12"
+                        height="8"
+                      >
+                        <use xlink:href="img/sprite.svg#arrow-down"></use>
+                      </svg>
+                      <legend class="form__title">Наличие</legend>
+                    </a>
+                    <ul class="form__content form__list available__list">
+                      <li class="form__list-item">
+                        <input
+                          class="form__input form__input--checkbox"
+                          type="checkbox"
+                          name="available"
+                          id="available"
+                        />
+                        <label for="available">В наличии</label>
+                      </li>
+                      <li class="form__list-item">
+                        <input
+                          class="form__input form__input--checkbox"
+                          type="checkbox"
+                          name="unavailable"
+                          id="unavailable"
+                        />
+                        <label for="unavailable">Под заказ</label>
+                      </li>
+                    </ul>
+                  </fieldset>
+                  <!-- ---------------------------------------- radio ------ Новинки -->
+                  <fieldset>
+                    <a class="form__drop-down news__drop-down" href="#">
+                      <svg class="form__icon news__icon" width="12" height="8">
+                        <use xlink:href="img/sprite.svg#arrow-down"></use>
+                      </svg>
+                      <legend class="form__title">Новинки</legend>
+                    </a>
+                    <ul class="form__content form__list news__list">
+                      <li class="form__list-item">
+                        <input
+                          class="form__input form__input--radio"
+                          type="radio"
+                          name="category"
+                          id="all"
+                        />
+                        <label for="all">Все</label>
+                      </li>
+                      <li class="form__list-item">
+                        <input
+                          class="form__input form__input--radio"
+                          type="radio"
+                          name="category"
+                          id="new"
+                        />
+                        <label for="new">Новинки</label>
+                      </li>
+                      <li class="form__list-item">
+                        <input
+                          class="form__input form__input--radio"
+                          type="radio"
+                          name="category"
+                          id="sale"
+                        />
+                        <label for="sale">Акции</label>
+                      </li>
+                    </ul>
+                  </fieldset>
+                  <!-- -------------------------------------------- range ------- Цена -->
+                  <fieldset>
+                    <a class="form__drop-down price__drop-down" href="#">
+                      <svg class="form__icon price__icon" width="12" height="8">
+                        <use xlink:href="img/sprite.svg#arrow-down"></use>
+                      </svg>
+                      <legend class="form__title">Цена</legend>
+                    </a>
+                    <div class="form__content price__list">
+                      <input type="range" />
+                    </div>
+                  </fieldset>
+                  <!-- ------------------------------------------- checkbox ------ Бренд -->
+                  <fieldset>
+                    <a class="form__drop-down brand__drop-down" href="#">
+                      <svg class="form__icon brand__icon" width="12" height="8">
+                        <use xlink:href="img/sprite.svg#arrow-down"></use>
+                      </svg>
+                      <legend class="form__title">Бренд</legend>
+                    </a>
+                    <ul class="form__content form__list brand__list">
+                      <li class="form__list-item">
+                        <input
+                          class="form__input form__input--checkbox"
+                          type="checkbox"
+                          name="brand"
+                          id="BRP"
+                        />
+                        <label for="BRP">BRP</label>
+                      </li>
+                      <li class="form__list-item">
+                        <input
+                          class="form__input form__input--checkbox"
+                          type="checkbox"
+                          name="brand"
+                          id="Spark-2"
+                        />
+                        <label for="Spark-2">Spark 2</label>
+                      </li>
+                      <li class="form__list-item">
+                        <input
+                          class="form__input form__input--checkbox"
+                          type="checkbox"
+                          name="brand"
+                          id="Spark-3"
+                        />
+                        <label for="Spark-3">Spark 3</label>
+                      </li>
+                    </ul>
+                  </fieldset>
+                  <!-- ------------------------------------------- checkbox ---- Модель -->
+                  <fieldset>
+                    <a class="form__drop-down models__drop-down" href="#">
+                      <svg
+                        class="form__icon models__icon"
+                        width="12"
+                        height="8"
+                      >
+                        <use xlink:href="img/sprite.svg#arrow-down"></use>
+                      </svg>
+                      <legend class="form__title">Модель</legend>
+                    </a>
+
+                    <div class="models__list">
+                      <ul class="form__content form__list">
+                        <div class="form__text-container">
+                          <input
+                            class="form__input form__input--checkbox form__input--text"
+                            type="text"
+                            name="text"
+                            id="text"
+                            placeholder="Введите модель"
+                          />
+                          <label class="visually-hidden" for="text"
+                            >Введите модель</label
+                          >
+                        </div>
+                        <li class="form__list-item">
+                          <input
+                            class="form__input form__input--checkbox"
+                            type="checkbox"
+                            name="model"
+                            id="SeaDoo-Spark-2"
+                          />
+                          <label for="SeaDoo-Spark-2">SeaDoo Spark 2</label>
+                        </li>
+                        <li class="form__list-item">
+                          <input
+                            class="form__input form__input--checkbox"
+                            type="checkbox"
+                            name="model"
+                            id="SeaDoo-Spark-90"
+                          />
+                          <label for="SeaDoo-Spark-90">SeaDoo Spark 90</label>
+                        </li>
+                        <li class="form__list-item">
+                          <input
+                            class="form__input form__input--checkbox"
+                            type="checkbox"
+                            name="model"
+                            id="SeaDoo-GTI-155"
+                          />
+                          <label for="SeaDoo-GTI-155">SeaDoo GTI 155</label>
+                        </li>
+                        <li class="form__list-item">
+                          <input
+                            class="form__input form__input--checkbox"
+                            type="checkbox"
+                            name="model"
+                            id="SeaDoo-GTR-230"
+                          />
+                          <label for="SeaDoo-GTR-230">SeaDoo GTR 230</label>
+                        </li>
+                      </ul>
+                      <ul class="form__content form__list model__list_hide">
+                        <li class="form__list-item">
+                          <input
+                            class="form__input form__input--checkbox"
+                            type="checkbox"
+                            name="model"
+                            id="Spark-2-UP-900"
+                          />
+                          <label for="Spark-2-UP-900">Spark 2-UP 900</label>
+                        </li>
+                        <li class="form__list-item">
+                          <input
+                            class="form__input form__input--checkbox"
+                            type="checkbox"
+                            name="model"
+                            id="SeaDoo-GTX-300"
+                          />
+                          <label for="SeaDoo-GTX-300">SeaDoo GTX 300</label>
+                        </li>
+                        <li class="form__list-item">
+                          <input
+                            class="form__input form__input--checkbox"
+                            type="checkbox"
+                            name="model"
+                            id="SeaDoo-WAKE-230"
+                          />
+                          <label for="SeaDoo-WAKE-230">SeaDoo Wake 230 </label>
+                        </li>
+                        <li class="form__list-item">
+                          <input
+                            class="form__input form__input--checkbox"
+                            type="checkbox"
+                            name="model"
+                            id="Spark-3-UP-900"
+                          />
+                          <label for="Spark-3-UP-900">Spark 3-UP 700</label>
+                        </li>
+                      </ul>
+                      <button
+                        class="models-more"
+                        type="button"
+                        aria-label="Показать еще"
+                      >
+                        Показать еще
+                      </button>
+                    </div>
+                  </fieldset>
+                </form>
+              </aside>
             </div>
             <div class="catalog__right-column">
               <ul class="catalog__inner-list">

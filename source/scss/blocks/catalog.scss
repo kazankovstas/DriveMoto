@@ -37,6 +37,9 @@
   &:not(:last-child) {
     margin-right: 10px;
   }
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .catalog__filter-btngrid {
@@ -98,7 +101,6 @@
 .catalog__inner-aside {
   width: 290px;
   height: 1330px;
-  background-color: #fdefef;
 }
 
 // ------------------------------------------ Pagination

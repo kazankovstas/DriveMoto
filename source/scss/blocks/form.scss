@@ -1,0 +1,137 @@
+.form__title {
+  padding-left: 26px;
+  margin-bottom: 18px;
+  font-size: 16px;
+  font-weight: 600;
+  color: $black;
+  transition: all 0.2s ease-in;
+  &:hover {
+    color: #c4c4c4;
+  }
+}
+
+fieldset {
+  padding: 0;
+  margin: 0 0 40px 0;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.form__drop-down {
+  display: flex;
+  align-items: baseline;
+  cursor: pointer;
+  &:hover {
+    .form__title,
+    .form__icon {
+      transition: all 0.2s ease-in;
+      color: $black;
+    }
+  }
+  &:focus-visible {
+    box-shadow: 0px 0px 8px rgba($blue, 0.8) inset;
+    border-radius: 0;
+  }
+}
+
+.available__icon,
+.news__icon,
+.price__icon,
+.brand__icon,
+.models__icon,
+.sales__icon,
+.countries__icon {
+  color: #c4c4c4;
+  &_active {
+    transform: rotate(180deg);
+  }
+}
+
+.available__list,
+.news__list,
+.price__list,
+.brand__list,
+.models__list,
+.sales__list,
+.countries__list {
+  // transform: translateY(-100%);
+  // opacity: 0;
+  // display: none;
+
+  padding: 6px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  opacity: 1;
+  transform: translateY(0);
+}
+.models__list {
+  .form__list-item {
+    width: 130px;
+  }
+}
+
+.available__list_hide,
+.news__list_hide,
+.price__list_hide,
+.brand__list_hide,
+.models__list_hide,
+.sales__list_hide,
+.countries__list_hide {
+  transform: translateY(-100%);
+  opacity: 0;
+  display: none;
+
+  // padding: 6px 0;
+  // display: flex;
+  // gap: 20px;
+  // opacity: 1;
+  // transform: translateY(0);
+}
+
+.available__drop-down_hide,
+.news__drop-down_hide,
+.price__drop-down_hide,
+.brand__drop-down_hide,
+.models__drop-down_hide,
+.sales__drop-down_hide,
+.countries__drop-down_hide {
+  transition: all 0.5s ease-in;
+  .footer-menu__title,
+  .footer-menu__icon {
+    color: $black;
+  }
+  &:hover {
+    .form__title,
+    .form__icon {
+      color: #c4c4c4;
+    }
+  }
+}
+
+.models__list {
+  .form__list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .model__list_hide {
+    display: none;
+  }
+}
+
+.form__text-container {
+  display: block;
+  width: 100%;
+  font-family: inherit;
+}
+
+.form__input--text {
+  width: 100%;
+  padding: 8px 20px;
+  border: 1px solid #e0e0e0;
+  &::placeholder {
+    color: #bdbec2;
+  }
+}
