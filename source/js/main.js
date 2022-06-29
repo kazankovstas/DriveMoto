@@ -268,3 +268,21 @@ $(function () {
     $(this).parent().removeClass("focused");
   });
 }
+
+{
+  $(".catalog__filter-btngrid").on("click", function () {
+    $(this).addClass("catalog-gridbtn--active");
+    $(".catalog__filter-btnline").removeClass("catalog-gridbtn--active");
+    $(".catalog__inner-item").removeClass("catalog__inner-item--column");
+    $(".catalog-item").removeClass("catalog-item--column");
+    $(".catalog-item__top").removeClass("catalog-item__top--column");
+  });
+
+  $(".catalog__filter-btnline").on("click", function () {
+    $(this).addClass("catalog-gridbtn--active");
+    $(".catalog__filter-btngrid").removeClass("catalog-gridbtn--active");
+    $(".catalog__inner-item").addClass("catalog__inner-item--column");
+    $(".catalog-item").addClass("catalog-item--column");
+    $(".catalog-item__top").addClass("catalog-item__top--column");
+  });
+}

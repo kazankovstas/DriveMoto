@@ -63,7 +63,6 @@ fieldset {
 .models__list,
 .sales__list,
 .countries__list {
-  // padding: 6px 0;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -76,6 +75,10 @@ fieldset {
   .form__list-item {
     width: 134px;
   }
+}
+
+.sales__list {
+  gap: 18px;
 }
 
 .available__list_hide,
@@ -232,6 +235,7 @@ label {
   transition: background 0.2s ease;
   height: 26px;
   font-size: 12px;
+  letter-spacing: 0.07em;
   line-height: 1;
 }
 

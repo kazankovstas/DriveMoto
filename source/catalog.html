@@ -254,12 +254,30 @@
           <h2 class="catalog__title">Гидроциклы</h2>
           <div class="catalog__filter">
             <div class="catalog__filter-item">
-              <button type="button" aria-label="Полноприводные">
+              <button
+                class="catalog__filt-btn"
+                type="button"
+                aria-label="Полноприводные"
+              >
                 Полноприводные
               </button>
-              <button type="button" aria-label="от 5000">от 5000</button>
-              <button type="button" aria-label="BRP">BRP</button>
-              <button type="button" aria-label="Spark">Spark</button>
+              <button
+                class="catalog__filt-btn"
+                type="button"
+                aria-label="от 5000"
+              >
+                от 5000
+              </button>
+              <button class="catalog__filt-btn" type="button" aria-label="BRP">
+                BRP
+              </button>
+              <button
+                class="catalog__filt-btn"
+                type="button"
+                aria-label="Spark"
+              >
+                Spark
+              </button>
             </div>
             <div class="catalog__filter-btn">
               <select class="select-css" name="" id="">
@@ -268,26 +286,20 @@
                 <option value="">По рейтингу</option>
               </select>
               <button
-                class="catalog__filter-btngrid"
+                class="catalog__filter-btngrid catalog-gridbtn--active"
                 type="button"
                 aria-label="Показать товары таблицей"
               >
-                <img
-                  src="img/icon/grid.png"
-                  width="23"
-                  height="21"
-                  alt="Показать товары таблицей"
-                />
-                <!-- <svg width="23" height="21">
+                <svg width="33" height="33">
                   <use xlink:href="img/sprite.svg#grid"></use>
-                </svg> -->
+                </svg>
               </button>
               <button
                 class="catalog__filter-btnline"
                 type="button"
                 aria-label="Показать товары списком"
               >
-                <svg width="25" height="19">
+                <svg width="28" height="33">
                   <use xlink:href="img/sprite.svg#list"></use>
                 </svg>
               </button>
@@ -1326,7 +1338,6 @@
                   </li>
                 </ul>
               </div>
-            </div>
           </div>
         </section>
       </main>

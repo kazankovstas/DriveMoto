@@ -1,6 +1,3 @@
-.catalog {
-}
-
 .catalog__title {
   margin-bottom: 26px;
   font-size: 30px;
@@ -20,17 +17,7 @@
   gap: 10px;
 }
 
-.catalog__filter-item button {
-  // padding: 5px 22px;
-  // border: none;
-  // background-color: $gray-bg;
-  // color: rgba($black, 0.7);
-  // border-radius: 3px;
-  // margin-right: 8px;
-  // line-height: 17px;
-  // transition: all 0.2s ease-in;
-  // cursor: pointer;
-
+.catalog__filt-btn {
   display: block;
   height: 33px;
   padding: 5px 20px;
@@ -62,21 +49,18 @@
   align-items: center;
 }
 
-.catalog__filter-btn button {
-  border: none;
-  background-color: transparent;
-  transition: all 0.2s ease-in;
-  cursor: pointer;
-  &:hover {
-    opacity: 0.7;
-  }
-}
-
 .catalog__filter-btngrid,
 .catalog__filter-btnline {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
   width: 33px;
   height: 33px;
-  padding: 3px;
+  color: #c4c4c4;
+  transition: all 0.2s ease-in;
+  &:hover {
+    opacity: 0.8;
+  }
   &:focus-visible {
     outline: none;
     box-shadow: 0px 0px 8px rgba($blue, 0.8);
@@ -85,35 +69,41 @@
   }
 }
 
+.catalog-gridbtn--active {
+  color: $black;
+}
+
 // ------------------------------------------- Inner
 .catalog__inner {
   display: flex;
   justify-content: space-between;
 }
 
-.catalog__left-column {
-}
-
-.catalog__right-column {
-}
-
 .catalog__inner-list {
-  display: grid;
-  grid-template-columns: repeat(3, 271px);
-  gap: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  row-gap: 28px;
+  max-width: 871px;
   margin-bottom: 70px;
 }
 
 .catalog__inner-item {
   width: 271px;
-  height: 403px;
+  height: 100%;
+  border: 1px solid #cdcdcd;
+  transition: all 0.7s ease-out;
+}
+
+.catalog__inner-item--column {
+  width: 100%;
 }
 
 .catalog-item {
-  width: 271px;
+  width: 100%;
   height: 403px;
   padding: 52px 0px 31px;
-  border: 1px solid #cdcdcd;
   border-radius: 3px;
   text-align: center;
   &:focus-visible {
@@ -123,10 +113,23 @@
   }
 }
 
+.catalog-item--column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  height: 250px;
+  padding: 12px 0;
+}
+
 .catalog-item__top {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.catalog-item__top--column {
+  order: 2;
 }
 
 .catalog-item__bottom {
@@ -229,4 +232,137 @@
 :root:lang(iw) .select-css {
   background-position: left 0.7em top 50%, 0 0;
   padding: 0.6em 0.8em 0.5em 1.4em;
+}
+
+// --------------------- media
+.catalog__left-column {
+  min-width: 299px;
+}
+
+.catalog__right-column {
+  width: 871px;
+}
+
+@media (max-width: 1200px) {
+  .catalog__inner-list {
+    justify-content: space-around;
+  }
+
+  .catalog__inner-item {
+    .product-item__wrapper {
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 968px) {
+  .breadcrumbs {
+    padding: 0 20px;
+  }
+
+  .catalog {
+    padding: 0 20px;
+  }
+}
+
+// -------------------- Широкие карточки
+@media (max-width: 910px) {
+  .catalog-item--column {
+    .product-item__title {
+      width: 180px;
+      padding: 6px 0;
+      font-size: 14px;
+    }
+    .product-item__price {
+      font-size: 20px;
+    }
+    .catalog-item__bottom {
+      padding: 0 10px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .catalog-item--column {
+    height: 300px;
+  }
+
+  .catalog__filter {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .catalog__filter-btn {
+    justify-content: flex-end;
+  }
+
+  .catalog-item--column,
+  .catalog-item__top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .catalog-item--column .catalog-item__bottom {
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .product-item__favorite {
+    top: 6px;
+  }
+
+  .product-item__notify-link {
+    bottom: 10px;
+    left: 16px;
+  }
+
+  .product-item__title {
+    width: auto;
+    margin: 0;
+  }
+
+  .catalog-item--column .product-item__price {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 640px) {
+  .catalog__inner {
+    flex-direction: column;
+  }
+
+  .catalog__left-column {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .catalog__right-column {
+    width: 100%;
+  }
+
+  .catalog__inner-aside {
+    width: 100%;
+    height: 100%;
+  }
+
+  .catalog__inner-list {
+    justify-content: space-between;
+  }
+
+  .catalog-item--column .product-item__price {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .catalog__inner-list {
+    justify-content: center;
+  }
 }
