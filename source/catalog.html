@@ -262,7 +262,7 @@
               <button type="button" aria-label="Spark">Spark</button>
             </div>
             <div class="catalog__filter-btn">
-              <select name="" id="">
+              <select class="select-css" name="" id="">
                 <option value="">По популярности</option>
                 <option value="">По стоимости</option>
                 <option value="">По рейтингу</option>
@@ -318,19 +318,21 @@
                     <ul class="form__content form__list available__list">
                       <li class="form__list-item">
                         <input
-                          class="form__input form__input--checkbox"
+                          class="form__input form__input--checkbox visually-hidden"
                           type="checkbox"
                           name="available"
                           id="available"
+                          value="В наличии"
                         />
                         <label for="available">В наличии</label>
                       </li>
                       <li class="form__list-item">
                         <input
-                          class="form__input form__input--checkbox"
+                          class="form__input form__input--checkbox visually-hidden"
                           type="checkbox"
                           name="unavailable"
                           id="unavailable"
+                          value="Под заказ"
                         />
                         <label for="unavailable">Под заказ</label>
                       </li>
@@ -347,28 +349,32 @@
                     <ul class="form__content form__list news__list">
                       <li class="form__list-item">
                         <input
-                          class="form__input form__input--radio"
+                          class="form__input form__input--radio visually-hidden"
                           type="radio"
                           name="category"
                           id="all"
+                          value="Все"
+                          checked
                         />
                         <label for="all">Все</label>
                       </li>
                       <li class="form__list-item">
                         <input
-                          class="form__input form__input--radio"
+                          class="form__input form__input--radio visually-hidden"
                           type="radio"
                           name="category"
                           id="new"
+                          value="Новинки"
                         />
                         <label for="new">Новинки</label>
                       </li>
                       <li class="form__list-item">
                         <input
-                          class="form__input form__input--radio"
+                          class="form__input form__input--radio visually-hidden"
                           type="radio"
                           name="category"
                           id="sale"
+                          value="Акции"
                         />
                         <label for="sale">Акции</label>
                       </li>
@@ -383,7 +389,27 @@
                       <legend class="form__title">Цена</legend>
                     </a>
                     <div class="form__content price__list">
-                      <input type="range" />
+                      <input class="price__range" type="range" value="20" />
+                      <div class="price__numbers">
+                        <p class="price__column">
+                          от<label
+                            ><input
+                              type="number"
+                              id="number-1"
+                              name="number"
+                              value="100000"
+                          /></label>
+                        </p>
+                        <p class="price__column">
+                          до<label
+                            ><input
+                              type="number"
+                              id="number-2"
+                              name="number"
+                              value="500000"
+                          /></label>
+                        </p>
+                      </div>
                     </div>
                   </fieldset>
                   <!-- ------------------------------------------- checkbox ------ Бренд -->
@@ -397,28 +423,33 @@
                     <ul class="form__content form__list brand__list">
                       <li class="form__list-item">
                         <input
-                          class="form__input form__input--checkbox"
+                          class="form__input form__input--checkbox visually-hidden"
                           type="checkbox"
                           name="brand"
                           id="BRP"
+                          value="BRP"
                         />
                         <label for="BRP">BRP</label>
                       </li>
                       <li class="form__list-item">
                         <input
-                          class="form__input form__input--checkbox"
+                          class="form__input form__input--checkbox visually-hidden"
                           type="checkbox"
                           name="brand"
                           id="Spark-2"
+                          value="Spark 2"
+                          checked
                         />
                         <label for="Spark-2">Spark 2</label>
                       </li>
                       <li class="form__list-item">
                         <input
-                          class="form__input form__input--checkbox"
+                          class="form__input form__input--checkbox visually-hidden"
                           type="checkbox"
                           name="brand"
                           id="Spark-3"
+                          value="Spark 3"
+                          checked
                         />
                         <label for="Spark-3">Spark 3</label>
                       </li>
@@ -436,9 +467,8 @@
                       </svg>
                       <legend class="form__title">Модель</legend>
                     </a>
-
-                    <div class="models__list">
-                      <ul class="form__content form__list">
+                    <div class="form__content models__list">
+                      <ul class="form__list">
                         <div class="form__text-container">
                           <input
                             class="form__input form__input--checkbox form__input--text"
@@ -453,75 +483,85 @@
                         </div>
                         <li class="form__list-item">
                           <input
-                            class="form__input form__input--checkbox"
+                            class="form__input form__input--checkbox visually-hidden"
                             type="checkbox"
                             name="model"
                             id="SeaDoo-Spark-2"
+                            value="SeaDoo Spark 2"
+                            checked
                           />
                           <label for="SeaDoo-Spark-2">SeaDoo Spark 2</label>
                         </li>
                         <li class="form__list-item">
                           <input
-                            class="form__input form__input--checkbox"
+                            class="form__input form__input--checkbox visually-hidden"
                             type="checkbox"
                             name="model"
                             id="SeaDoo-Spark-90"
+                            value="SeaDoo Spark 90"
+                            checked
                           />
                           <label for="SeaDoo-Spark-90">SeaDoo Spark 90</label>
                         </li>
                         <li class="form__list-item">
                           <input
-                            class="form__input form__input--checkbox"
+                            class="form__input form__input--checkbox visually-hidden"
                             type="checkbox"
                             name="model"
                             id="SeaDoo-GTI-155"
+                            value="SeaDoo GTI 155"
                           />
                           <label for="SeaDoo-GTI-155">SeaDoo GTI 155</label>
                         </li>
                         <li class="form__list-item">
                           <input
-                            class="form__input form__input--checkbox"
+                            class="form__input form__input--checkbox visually-hidden"
                             type="checkbox"
                             name="model"
                             id="SeaDoo-GTR-230"
+                            value="SeaDoo GTR 230"
                           />
                           <label for="SeaDoo-GTR-230">SeaDoo GTR 230</label>
                         </li>
                       </ul>
-                      <ul class="form__content form__list model__list_hide">
+                      <ul class="form__list model__list_hide">
                         <li class="form__list-item">
                           <input
-                            class="form__input form__input--checkbox"
+                            class="form__input form__input--checkbox visually-hidden"
                             type="checkbox"
                             name="model"
                             id="Spark-2-UP-900"
+                            value="Spark 2-UP 900"
                           />
                           <label for="Spark-2-UP-900">Spark 2-UP 900</label>
                         </li>
                         <li class="form__list-item">
                           <input
-                            class="form__input form__input--checkbox"
+                            class="form__input form__input--checkbox visually-hidden"
                             type="checkbox"
                             name="model"
                             id="SeaDoo-GTX-300"
+                            value="SeaDoo GTX 300"
                           />
                           <label for="SeaDoo-GTX-300">SeaDoo GTX 300</label>
                         </li>
                         <li class="form__list-item">
                           <input
-                            class="form__input form__input--checkbox"
+                            class="form__input form__input--checkbox visually-hidden"
                             type="checkbox"
                             name="model"
                             id="SeaDoo-WAKE-230"
+                            value="SeaDoo Wake 230"
                           />
-                          <label for="SeaDoo-WAKE-230">SeaDoo Wake 230 </label>
+                          <label for="SeaDoo-WAKE-230">SeaDoo Wake 230</label>
                         </li>
                         <li class="form__list-item">
                           <input
-                            class="form__input form__input--checkbox"
+                            class="form__input form__input--checkbox visually-hidden"
                             type="checkbox"
                             name="model"
                             id="Spark-3-UP-900"
+                            value="Spark 3-UP 700"
                           />
                           <label for="Spark-3-UP-900">Spark 3-UP 700</label>
                         </li>
@@ -535,6 +575,127 @@
                       </button>
                     </div>
                   </fieldset>
+                  <!-- ------------------------------------------- checkbox ------ Акции -->
+                  <fieldset>
+                    <a class="form__drop-down sales__drop-down" href="#">
+                      <svg class="form__icon sales__icon" width="12" height="8">
+                        <use xlink:href="img/sprite.svg#arrow-down"></use>
+                      </svg>
+                      <legend class="form__title">Акции</legend>
+                    </a>
+                    <ul class="form__content form__list sales__list">
+                      <li class="form__list-item">
+                        <label class="checkbox-btn">
+                          <input
+                            class="form__input form__input--checkbox form__input--checkbox-sale visually-hidden"
+                            type="checkbox"
+                            value="Sale"
+                            checked
+                          />
+                          <span>Sale</span>
+                        </label>
+                      </li>
+                      <li class="form__list-item">
+                        <label class="checkbox-btn">
+                          <input
+                            class="form__input form__input--checkbox form__input--checkbox-sale visually-hidden"
+                            type="checkbox"
+                            value="New"
+                            disabled
+                          />
+                          <span>New</span>
+                        </label>
+                      </li>
+                      <li class="form__list-item">
+                        <label class="checkbox-btn">
+                          <input
+                            class="form__input form__input--checkbox form__input--checkbox-sale visually-hidden"
+                            type="checkbox"
+                            value="Hit"
+                            disabled
+                          />
+                          <span>Hit</span>
+                        </label>
+                      </li>
+                      <li class="form__list-item">
+                        <label class="checkbox-btn">
+                          <input
+                            class="form__input form__input--checkbox form__input--checkbox-sale visually-hidden"
+                            type="checkbox"
+                            value="Дилер"
+                          />
+                          <span>Дилер</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </fieldset>
+                  <!-- ------------------------------------------- checkbox ------ Страны -->
+                  <fieldset>
+                    <a class="form__drop-down countries__drop-down" href="#">
+                      <svg
+                        class="form__icon countries__icon"
+                        width="12"
+                        height="8"
+                      >
+                        <use xlink:href="img/sprite.svg#arrow-down"></use>
+                      </svg>
+                      <legend class="form__title">Страны</legend>
+                    </a>
+                    <ul class="form__content form__list countries__list">
+                      <li class="form__list-item">
+                        <input
+                          class="form__input form__input--checkbox visually-hidden"
+                          type="checkbox"
+                          name="countries"
+                          id="russia"
+                          value="Россия"
+                        />
+                        <label for="russia">Россия</label>
+                      </li>
+                      <li class="form__list-item">
+                        <input
+                          class="form__input form__input--checkbox visually-hidden"
+                          type="checkbox"
+                          name="countries"
+                          id="germany"
+                          value="Германия"
+                          checked
+                        />
+                        <label for="germany">Германия</label>
+                      </li>
+                      <li class="form__list-item">
+                        <input
+                          class="form__input form__input--checkbox visually-hidden"
+                          type="checkbox"
+                          name="countries"
+                          id="china"
+                          value="Китай"
+                          checked
+                        />
+                        <label for="china">Китай</label>
+                      </li>
+                      <li class="form__list-item">
+                        <input
+                          class="form__input form__input--checkbox visually-hidden"
+                          type="checkbox"
+                          name="countries"
+                          id="usa"
+                          value="США"
+                        />
+                        <label for="usa">США</label>
+                      </li>
+                    </ul>
+                  </fieldset>
+                  <!-- -------------------------------------------------- Button -->
+                  <div class="form__button-container">
+                    <button
+                      class="form__button"
+                      type="submit"
+                      aria-label="Выбрать"
+                    >
+                      Выбрать
+                    </button>
+                  </div>
                 </form>
               </aside>
             </div>

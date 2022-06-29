@@ -255,16 +255,16 @@ $(function () {
   });
 }
 
-// // -------------------------------------------------------------------------- Кнопка добавить в избранное
-// {
-//   {
-//     const btnLike = document.querySelector(".product-item__favorite");
-//     const btnLikeIcon = document.querySelector(".product-item__icon");
+// --------------------------------------------------- Focus на кнопкe в форме Акции
+{
+  $(window).keyup(function (e) {
+    var target = $(".checkbox-btn input:focus-visible");
+    if (e.keyCode == 9 && $(target).length) {
+      $(target).parent().addClass("focused");
+    }
+  });
 
-//     btnLike.addEventListener("click", function () {
-//       btnLikeIcon.classList.contains("product-item__icon--active")
-//         ? btnLikeIcon.classList.remove("product-item__icon--active")
-//         : btnLikeIcon.classList.add("product-item__icon--active");
-//     });
-//   }
-// }
+  $(".checkbox-btn input").focusout(function () {
+    $(this).parent().removeClass("focused");
+  });
+}
