@@ -286,3 +286,17 @@ $(function () {
     $(".catalog-item__top").addClass("catalog-item__top--column");
   });
 }
+
+{
+  const filterShow = document.querySelector(".btn__filter-show");
+  const filter = document.querySelector(".catalog__left-column");
+
+  filterShow.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    filterShow.classList.toggle("btn__filter-show--active");
+    filter.classList.toggle("catalog__left-column--show");
+    filterShow.classList.contains("btn__filter-show--active")
+      ? filter.classList.add("catalog__left-column--show")
+      : filter.classList.remove("catalog__left-column--show");
+  });
+}
