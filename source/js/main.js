@@ -31,8 +31,20 @@ $(function () {
     $(".product-slider").slick("setPosition");
   });
 
+  // ----------------------------------------------------------- Оставляем класс только у одного таба на карточке товара
+  $(".delivery__item").on("click", function () {
+    $(".delivery__item").removeClass("delivery__item--active");
+    $(this).addClass("delivery__item--active");
+  });
+
+  // ----------------------------------------------------------------------- Лайк на карточке товара
   $(".product-item__icon").on("click", function () {
-    $(".product-item__icon").toggleClass("product-item__icon--active");
+    $(this).toggleClass("product-item__icon--active");
+  });
+
+  // -------------------------------------------------------------------- Добавить в избранное на странице с товаром
+  $(".product-card__button").on("click", function () {
+    $(this).toggleClass("product-card__button--active");
   });
 
   $(".product-slider").slick({

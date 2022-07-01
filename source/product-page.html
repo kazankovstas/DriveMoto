@@ -210,28 +210,32 @@
         <div class="header__bottom">
           <ul class="header__bottom-inner">
             <li class="menu-categories__item">
-              <a href="#" class="menu-categories__link">Квадроциклы</a>
+              <a href="catalog.html" class="menu-categories__link"
+                >Квадроциклы</a
+              >
             </li>
             <li class="menu-categories__item">
-              <a href="#" class="menu-categories__link">Катера</a>
+              <a href="catalog.html" class="menu-categories__link">Катера</a>
             </li>
             <li class="menu-categories__item">
-              <a href="#" class="menu-categories__link">Гидроциклы</a>
+              <a href="catalog.html" class="menu-categories__link"
+                >Гидроциклы</a
+              >
             </li>
             <li class="menu-categories__item">
-              <a href="#" class="menu-categories__link">Лодки</a>
+              <a href="catalog.html" class="menu-categories__link">Лодки</a>
             </li>
             <li class="menu-categories__item">
-              <a href="#" class="menu-categories__link">Вездеходы</a>
+              <a href="catalog.html" class="menu-categories__link">Вездеходы</a>
             </li>
             <li class="menu-categories__item">
-              <a href="#" class="menu-categories__link">Снегоходы</a>
+              <a href="catalog.html" class="menu-categories__link">Снегоходы</a>
             </li>
             <li class="menu-categories__item">
-              <a href="#" class="menu-categories__link">Двигатели</a>
+              <a href="catalog.html" class="menu-categories__link">Двигатели</a>
             </li>
             <li class="menu-categories__item">
-              <a href="#" class="menu-categories__link">Запчасти</a>
+              <a href="catalog.html" class="menu-categories__link">Запчасти</a>
             </li>
           </ul>
         </div>
@@ -295,6 +299,7 @@
                   class="product-card__button"
                   type="button"
                   aria-label="Добавить в избранное"
+                  title="Добавить в избранное"
                 >
                   <svg width="24" height="24">
                     <use xlink:href="img/sprite.svg#favorite"></use>
@@ -304,11 +309,54 @@
                   class="product-card__button"
                   type="button"
                   aria-label="Добавить в сравнение"
+                  title="Сравнить товар"
                 >
                   <svg width="20" height="28">
                     <use xlink:href="img/sprite.svg#comparison"></use>
                   </svg>
                 </button>
+                <div class="raiting__container">
+                  <fieldset class="raiting">
+                    <div class="raiting__group">
+                      <input
+                        class="raiting__star"
+                        type="radio"
+                        name="amara"
+                        value="1"
+                        aria-label="Ужасно"
+                      />
+                      <input
+                        class="raiting__star"
+                        type="radio"
+                        name="amara"
+                        value="2"
+                        aria-label="Плохо"
+                      />
+                      <input
+                        class="raiting__star"
+                        type="radio"
+                        name="amara"
+                        value="3"
+                        aria-label="Нормально"
+                      />
+                      <input
+                        class="raiting__star"
+                        type="radio"
+                        name="amara"
+                        value="4"
+                        aria-label="Хорошо"
+                        checked
+                      />
+                      <input
+                        class="raiting__star"
+                        type="radio"
+                        name="amara"
+                        value="5"
+                        aria-label="Отлично"
+                      />
+                    </div>
+                  </fieldset>
+                </div>
               </div>
               <div class="product-card__tabs tabs-wrapper">
                 <a
@@ -344,7 +392,7 @@
                     </li>
                     <li class="product-card__item">
                       <p class="product-card__key">Год выпуска</p>
-                      <p class="product-card__value">Б2018</p>
+                      <p class="product-card__value">2018</p>
                     </li>
                   </ul>
                   <a class="product-card__more" href="#">Показать еще</a>
@@ -392,6 +440,204 @@
                   </button>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+        <section class="delivery card__tabs page__section">
+          <div class="delivery__top tabs-wrapper">
+            <a class="tab delivery__item" href="#product-card__tabs-1"
+              >О товаре</a
+            >
+            <a class="tab delivery__item" href="#product-card__tabs-2"
+              >Характеристики</a
+            >
+            <a class="tab delivery__item" href="#product-card__tabs-3"
+              >Отзывы</a
+            >
+            <a
+              class="tab delivery__item--active delivery__item tab--active"
+              href="#product-card__tabs-4"
+              >Самовывоз</a
+            >
+            <a class="tab delivery__item" href="#product-card__tabs-5"
+              >Доставка</a
+            >
+            <a class="tab delivery__item" href="#product-card__tabs-6"
+              >Сервис</a
+            >
+            <a class="tab delivery__item" href="#product-card__tabs-7"
+              >Гарантия</a
+            >
+          </div>
+          <div class="tabs-container">
+            <div
+              id="product-card__tabs-1"
+              class="delivery__tabs-content delivery__tabs-content-1 tabs__content"
+            >
+              <p class="delivery__tabs-content-title">О товаре</p>
+            </div>
+            <div
+              id="product-card__tabs-2"
+              class="delivery__tabs-content delivery__tabs-content-2 tabs__content"
+            >
+              <p class="delivery__tabs-content-title">Характеристики</p>
+            </div>
+            <div
+              id="product-card__tabs-3"
+              class="delivery__tabs-content delivery__tabs-content-3 tabs__content"
+            >
+              <p class="delivery__tabs-content-title">Отзывы</p>
+            </div>
+            <div
+              id="product-card__tabs-4"
+              class="delivery__tabs-content delivery__tabs-content-4 tabs__content tabs__content--active"
+            >
+              <form class="card__top" action="">
+                <div class="card__top-left">
+                  <label class="card__label" for="card-text"> Магазин </label>
+                  <input
+                    class="card__input-text"
+                    type="text"
+                    name="store"
+                    id="card-text"
+                  />
+                </div>
+                <div class="card__top-right">
+                  <input
+                    class="card__input-radio visually-hidden"
+                    type="radio"
+                    name="delivery"
+                    id="today"
+                    checked
+                  />
+                  <label class="card__label-radio" for="today"
+                    >Забрать сегодня</label
+                  >
+                </div>
+                <div class="card__top-right">
+                  <input
+                    class="card__input-radio visually-hidden"
+                    type="radio"
+                    name="delivery"
+                    id="week"
+                  />
+                  <label class="card__label-radio" for="week"
+                    >Забрать в течение недели</label
+                  >
+                </div>
+              </form>
+              <header class="card__header">
+                <p class="card__heading">Адрес</p>
+                <p class="card__heading">Режим работы</p>
+                <p class="card__heading">Доступно</p>
+                <p class="card__heading">Количество</p>
+              </header>
+              <div class="card__description">
+                <p class="card__descr-text">Москва, ул. Науки 25</p>
+                <ul>
+                  <li class="card__mode">
+                    <p class="card__descr-text">пн-сб:</p>
+                    <p class="card__descr-text">08:00-19:00</p>
+                  </li>
+                  <li class="card__mode">
+                    <p class="card__descr-text">вс:</p>
+                    <p class="card__descr-text">09:00-17:00</p>
+                  </li>
+                </ul>
+                <p class="card__descr-text">В наличии</p>
+                <p class="card__descr-text">1</p>
+                <button
+                  class="card__button-buy"
+                  type="button"
+                  aria-label="Купить"
+                >
+                  Купить
+                </button>
+              </div>
+              <div class="card__description">
+                <p class="card__descr-text">Москва, ул. Южная 134</p>
+                <ul>
+                  <li class="card__mode">
+                    <p class="card__descr-text">пн-сб:</p>
+                    <p class="card__descr-text">08:00-19:00</p>
+                  </li>
+                  <li class="card__mode">
+                    <p class="card__descr-text">вс:</p>
+                    <p class="card__descr-text">09:00-17:00</p>
+                  </li>
+                </ul>
+                <p class="card__descr-text">В наличии</p>
+                <p class="card__descr-text">2</p>
+                <button
+                  class="card__button-buy"
+                  type="button"
+                  aria-label="Купить"
+                >
+                  Купить
+                </button>
+              </div>
+              <div class="card__description">
+                <p class="card__descr-text">Санкт-Петербург, ул. Красная 19</p>
+                <ul>
+                  <li class="card__mode">
+                    <p class="card__descr-text">пн-сб:</p>
+                    <p class="card__descr-text">08:00-19:00</p>
+                  </li>
+                  <li class="card__mode">
+                    <p class="card__descr-text">вс:</p>
+                    <p class="card__descr-text">09:00-17:00</p>
+                  </li>
+                </ul>
+                <p class="card__descr-text">Нет в наличии</p>
+                <p class="card__descr-text">0</p>
+                <button
+                  class="card__button-buy"
+                  type="button"
+                  aria-label="Купить"
+                >
+                  Купить
+                </button>
+              </div>
+              <div class="card__description">
+                <p class="card__descr-text">Киев, ул Шевченко 167</p>
+                <ul>
+                  <li class="card__mode">
+                    <p class="card__descr-text">пн-сб:</p>
+                    <p class="card__descr-text">08:00-19:00</p>
+                  </li>
+                  <li class="card__mode">
+                    <p class="card__descr-text">вс:</p>
+                    <p class="card__descr-text">09:00-17:00</p>
+                  </li>
+                </ul>
+                <p class="card__descr-text">Нет в наличии</p>
+                <p class="card__descr-text">0</p>
+                <button
+                  class="card__button-buy"
+                  type="button"
+                  aria-label="Купить"
+                >
+                  Купить
+                </button>
+              </div>
+            </div>
+            <div
+              id="product-card__tabs-5"
+              class="delivery__tabs-content delivery__tabs-content-5 tabs__content"
+            >
+              <p class="delivery__tabs-content-title">Доставка</p>
+            </div>
+            <div
+              id="product-card__tabs-6"
+              class="delivery__tabs-content delivery__tabs-content-6 tabs__content"
+            >
+              <p class="delivery__tabs-content-title">Сервис</p>
+            </div>
+            <div
+              id="product-card__tabs-7"
+              class="delivery__tabs-content delivery__tabs-content-7 tabs__content"
+            >
+              <p class="delivery__tabs-content-title">Гарантия</p>
             </div>
           </div>
         </section>
@@ -1586,28 +1832,48 @@
           <div class="footer__social social">
             <ul class="social__list">
               <li class="social__item">
-                <a class="social__link" href="#" aria-label="Инстаграм">
+                <a
+                  class="social__link"
+                  href="#"
+                  aria-label="Инстаграм"
+                  title="Instagram"
+                >
                   <svg width="30" height="30">
                     <use xlink:href="img/sprite.svg#instagram"></use>
                   </svg>
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link" href="#" aria-label="Вконтакте">
+                <a
+                  class="social__link"
+                  href="#"
+                  aria-label="Вконтакте"
+                  title="VK"
+                >
                   <svg width="30" height="30">
                     <use xlink:href="img/sprite.svg#vk"></use>
                   </svg>
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link" href="#" aria-label="Фейсбук">
+                <a
+                  class="social__link"
+                  href="#"
+                  aria-label="Фейсбук"
+                  title="Facebook"
+                >
                   <svg width="30" height="30">
                     <use xlink:href="img/sprite.svg#facebook"></use>
                   </svg>
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link" href="#" aria-label="Ютуб">
+                <a
+                  class="social__link"
+                  href="#"
+                  aria-label="Ютуб"
+                  title="YouTube"
+                >
                   <svg width="30" height="30">
                     <use xlink:href="img/sprite.svg#youtube"></use>
                   </svg>

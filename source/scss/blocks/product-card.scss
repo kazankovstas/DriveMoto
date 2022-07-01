@@ -45,8 +45,19 @@
 }
 
 .product-card__link {
+  padding: 4px;
   font-size: 15px;
   color: $blue;
+  transition: all 0.2s ease-in;
+  &:hover {
+    color: rgba($blue, 0.8);
+  }
+  &:focus-visible {
+    outline: none;
+    border-radius: 3px;
+    background-color: rgba($blue, 0.2);
+    color: $blue;
+  }
 }
 
 // -------------------------- Правая колонка
@@ -72,7 +83,6 @@
 }
 
 .product-card__button {
-  color: red;
   transition: all 0.2s ease-in;
   padding: 0 5px;
   border: none;
@@ -80,8 +90,18 @@
   color: $black;
   cursor: pointer;
   &:hover {
-    color: $blue;
+    color: rgba($blue, 0.8);
   }
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0px 0px 8px rgba($blue, 0.8);
+    color: $blue;
+    border-radius: 8px;
+  }
+}
+
+.product-card__button--active {
+  color: $blue;
 }
 
 .product-card__tabs {
@@ -94,6 +114,12 @@
   opacity: 0.6;
   &:not(:last-child) {
     margin-right: 34px;
+  }
+  &:focus-visible {
+    outline: 2px solid rgba($blue, 0.8);
+    border-radius: 8px;
+    color: $blue;
+    opacity: 1;
   }
 }
 
@@ -127,6 +153,15 @@
   margin-bottom: 40px;
   color: $blue;
   border-bottom: 1px solid $blue;
+  transition: all 0.2s ease-in;
+  &:hover {
+    color: rgba($blue, 0.5);
+  }
+  &:focus-visible {
+    outline: none;
+    color: #7afa43;
+    border-bottom-color: #7afa43;
+  }
 }
 
 .product-card__btn-buy {
@@ -139,4 +174,17 @@
   padding: 16px 53px;
   transition: all 0.2s ease-in;
   cursor: pointer;
+  &:hover {
+    background-color: rgba($blue, 0.8);
+  }
+  &:active {
+    background-color: $blue;
+    color: #7afa43;
+  }
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0px 0px 8px#7afa43;
+    color: #7afa43;
+    border-radius: 8px;
+  }
 }
