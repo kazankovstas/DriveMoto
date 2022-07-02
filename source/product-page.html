@@ -288,6 +288,13 @@
                   >Нашли дешевле? Снизим цену!</a
                 >
               </div>
+              <button
+                class="product-card__button-mobile"
+                type="button"
+                aria-label="Купить"
+              >
+                Купить
+              </button>
             </div>
             <div class="product-card__content">
               <h1 class="product-card__title">
@@ -358,86 +365,88 @@
                   </fieldset>
                 </div>
               </div>
-              <div class="product-card__tabs tabs-wrapper">
-                <a
-                  class="tab product-card__tabs-item tab--active"
-                  href="#product-1"
-                  >Характеристики</a
-                >
-                <a class="tab product-card__tabs-item" href="#product-2"
-                  >Наличие в магазине</a
-                >
-              </div>
-              <div class="tabs-container">
-                <div
-                  class="product-card__tab-content tabs__content tabs__content--active"
-                  id="product-1"
-                >
-                  <ul class="product-card__list">
-                    <li class="product-card__item">
-                      <p class="product-card__key">Производитель</p>
-                      <p class="product-card__value">Канада</p>
-                    </li>
-                    <li class="product-card__item">
-                      <p class="product-card__key">Количество мест, шт:</p>
-                      <p class="product-card__value">3</p>
-                    </li>
-                    <li class="product-card__item">
-                      <p class="product-card__key">Мощность, л.с.</p>
-                      <p class="product-card__value">155</p>
-                    </li>
-                    <li class="product-card__item">
-                      <p class="product-card__key">Тип двигателя</p>
-                      <p class="product-card__value">Бензиновый</p>
-                    </li>
-                    <li class="product-card__item">
-                      <p class="product-card__key">Год выпуска</p>
-                      <p class="product-card__value">2018</p>
-                    </li>
-                  </ul>
-                  <a class="product-card__more" href="#">Показать еще</a>
-                  <button
-                    class="product-card__btn-buy"
-                    type="button"
-                    aria-label="Купить товар"
+              <div class="product-card__tabs-container">
+                <div class="product-card__tabs tabs-wrapper">
+                  <a
+                    class="tab product-card__tabs-item tab--active"
+                    href="#product-1"
+                    >Характеристики</a
                   >
-                    Купить
-                  </button>
+                  <a class="tab product-card__tabs-item" href="#product-2"
+                    >Наличие в магазине</a
+                  >
                 </div>
-                <div
-                  class="product-card__tab-content tabs__content"
-                  id="product-2"
-                >
-                  <ul class="product-card__list">
-                    <li class="product-card__item">
-                      <p class="product-card__key">В наличии:</p>
-                      <p class="product-card__value">в 2 магазинах</p>
-                    </li>
-                    <li class="product-card__item">
-                      <p class="product-card__key">Доставим на дом:</p>
-                      <p class="product-card__value">Послезавтра</p>
-                    </li>
-                    <li class="product-card__item">
-                      <p class="product-card__key">Самовывоз:</p>
-                      <p class="product-card__value">Сегодня</p>
-                    </li>
-                    <li class="product-card__item">
-                      <p class="product-card__key">Экспресс-доставка</p>
-                      <p class="product-card__value">после 10:00</p>
-                    </li>
-                    <li class="product-card__item">
-                      <p class="product-card__key">Способ оплаты:</p>
-                      <p class="product-card__value">Онлайн/При получении</p>
-                    </li>
-                  </ul>
-                  <a class="product-card__more" href="#">Показать еще</a>
-                  <button
-                    class="product-card__btn-buy"
-                    type="button"
-                    aria-label="Купить товар"
+                <div class="tabs-container">
+                  <div
+                    class="product-card__tab-content tabs__content tabs__content--active"
+                    id="product-1"
                   >
-                    Купить
-                  </button>
+                    <ul class="product-card__list">
+                      <li class="product-card__item">
+                        <p class="product-card__key">Производитель</p>
+                        <p class="product-card__value">Канада</p>
+                      </li>
+                      <li class="product-card__item">
+                        <p class="product-card__key">Количество мест, шт:</p>
+                        <p class="product-card__value">3</p>
+                      </li>
+                      <li class="product-card__item">
+                        <p class="product-card__key">Мощность, л.с.</p>
+                        <p class="product-card__value">155</p>
+                      </li>
+                      <li class="product-card__item">
+                        <p class="product-card__key">Тип двигателя</p>
+                        <p class="product-card__value">Бензиновый</p>
+                      </li>
+                      <li class="product-card__item">
+                        <p class="product-card__key">Год выпуска</p>
+                        <p class="product-card__value">2018</p>
+                      </li>
+                    </ul>
+                    <a class="product-card__more" href="#">Показать еще</a>
+                    <button
+                      class="product-card__btn-buy"
+                      type="button"
+                      aria-label="Купить товар"
+                    >
+                      Купить
+                    </button>
+                  </div>
+                  <div
+                    class="product-card__tab-content tabs__content"
+                    id="product-2"
+                  >
+                    <ul class="product-card__list">
+                      <li class="product-card__item">
+                        <p class="product-card__key">В наличии:</p>
+                        <p class="product-card__value">в 2 магазинах</p>
+                      </li>
+                      <li class="product-card__item">
+                        <p class="product-card__key">Доставим на дом:</p>
+                        <p class="product-card__value">Послезавтра</p>
+                      </li>
+                      <li class="product-card__item">
+                        <p class="product-card__key">Самовывоз:</p>
+                        <p class="product-card__value">Сегодня</p>
+                      </li>
+                      <li class="product-card__item">
+                        <p class="product-card__key">Экспресс-доставка</p>
+                        <p class="product-card__value">после 10:00</p>
+                      </li>
+                      <li class="product-card__item">
+                        <p class="product-card__key">Способ оплаты:</p>
+                        <p class="product-card__value">Онлайн/При получении</p>
+                      </li>
+                    </ul>
+                    <a class="product-card__more" href="#">Показать еще</a>
+                    <button
+                      class="product-card__btn-buy"
+                      type="button"
+                      aria-label="Купить товар"
+                    >
+                      Купить
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -500,6 +509,7 @@
                     type="text"
                     name="store"
                     id="card-text"
+                    placeholder="Введите название магазина"
                   />
                 </div>
                 <div class="card__top-right">
@@ -534,7 +544,7 @@
               </header>
               <div class="card__description">
                 <p class="card__descr-text">Москва, ул. Науки 25</p>
-                <ul>
+                <ul class="card__description-list">
                   <li class="card__mode">
                     <p class="card__descr-text">пн-сб:</p>
                     <p class="card__descr-text">08:00-19:00</p>
@@ -554,7 +564,7 @@
                   Купить
                 </button>
               </div>
-              <div class="card__description">
+              <div class="card__description card__description--hide">
                 <p class="card__descr-text">Москва, ул. Южная 134</p>
                 <ul>
                   <li class="card__mode">
@@ -576,7 +586,7 @@
                   Купить
                 </button>
               </div>
-              <div class="card__description">
+              <div class="card__description card__description--hide">
                 <p class="card__descr-text">Санкт-Петербург, ул. Красная 19</p>
                 <ul>
                   <li class="card__mode">
@@ -598,7 +608,7 @@
                   Купить
                 </button>
               </div>
-              <div class="card__description">
+              <div class="card__description card__description--hide">
                 <p class="card__descr-text">Киев, ул Шевченко 167</p>
                 <ul>
                   <li class="card__mode">
@@ -705,6 +715,7 @@
                           class="product-item__favorite"
                           type="button"
                           aria-label="Добавить товар в избранное"
+                          title="Добавить в избранное"
                         >
                           <svg
                             class="product-item__icon"
@@ -718,6 +729,7 @@
                           class="product-item__basket"
                           type="button"
                           aria-label="Добавить товар в корзину"
+                          title="Добавить в корзину"
                         >
                           <svg width="30" height="23">
                             <use xlink:href="img/sprite.svg#cart"></use>
@@ -758,6 +770,7 @@
                           class="product-item__favorite"
                           type="button"
                           aria-label="Добавить товар в избранное"
+                          title="Добавить в избранное"
                         >
                           <svg
                             class="product-item__icon"
@@ -771,6 +784,7 @@
                           class="product-item__basket"
                           type="button"
                           aria-label="Добавить товар в корзину"
+                          title="Добавить в корзину"
                         >
                           <svg width="30" height="23">
                             <use xlink:href="img/sprite.svg#cart"></use>
@@ -809,6 +823,7 @@
                           class="product-item__favorite"
                           type="button"
                           aria-label="Добавить товар в избранное"
+                          title="Добавить в избранное"
                         >
                           <svg
                             class="product-item__icon"
@@ -822,6 +837,7 @@
                           class="product-item__basket"
                           type="button"
                           aria-label="Добавить товар в корзину"
+                          title="Добавить в корзину"
                         >
                           <svg width="30" height="23">
                             <use xlink:href="img/sprite.svg#cart"></use>
@@ -860,6 +876,7 @@
                           class="product-item__favorite"
                           type="button"
                           aria-label="Добавить товар в избранное"
+                          title="Добавить в избранное"
                         >
                           <svg
                             class="product-item__icon"
@@ -873,6 +890,7 @@
                           class="product-item__basket"
                           type="button"
                           aria-label="Добавить товар в корзину"
+                          title="Добавить в корзину"
                         >
                           <svg width="30" height="23">
                             <use xlink:href="img/sprite.svg#cart"></use>
@@ -913,6 +931,7 @@
                           class="product-item__favorite"
                           type="button"
                           aria-label="Добавить товар в избранное"
+                          title="Добавить в избранное"
                         >
                           <svg
                             class="product-item__icon"
@@ -926,6 +945,7 @@
                           class="product-item__basket"
                           type="button"
                           aria-label="Добавить товар в корзину"
+                          title="Добавить в корзину"
                         >
                           <svg width="30" height="23">
                             <use xlink:href="img/sprite.svg#cart"></use>
@@ -973,6 +993,7 @@
                           class="product-item__favorite"
                           type="button"
                           aria-label="Добавить товар в избранное"
+                          title="Добавить в избранное"
                         >
                           <svg
                             class="product-item__icon"
@@ -986,6 +1007,7 @@
                           class="product-item__basket"
                           type="button"
                           aria-label="Добавить товар в корзину"
+                          title="Добавить в корзину"
                         >
                           <svg width="30" height="23">
                             <use xlink:href="img/sprite.svg#cart"></use>
@@ -1026,6 +1048,7 @@
                           class="product-item__favorite"
                           type="button"
                           aria-label="Добавить товар в избранное"
+                          title="Добавить в избранное"
                         >
                           <svg
                             class="product-item__icon"
@@ -1039,6 +1062,7 @@
                           class="product-item__basket"
                           type="button"
                           aria-label="Добавить товар в корзину"
+                          title="Добавить в корзину"
                         >
                           <svg width="30" height="23">
                             <use xlink:href="img/sprite.svg#cart"></use>
@@ -1079,6 +1103,7 @@
                           class="product-item__favorite"
                           type="button"
                           aria-label="Добавить товар в избранное"
+                          title="Добавить в избранное"
                         >
                           <svg
                             class="product-item__icon"
@@ -1092,6 +1117,7 @@
                           class="product-item__basket"
                           type="button"
                           aria-label="Добавить товар в корзину"
+                          title="Добавить в корзину"
                         >
                           <svg width="30" height="23">
                             <use xlink:href="img/sprite.svg#cart"></use>
@@ -1132,6 +1158,7 @@
                           class="product-item__favorite"
                           type="button"
                           aria-label="Добавить товар в избранное"
+                          title="Добавить в избранное"
                         >
                           <svg
                             class="product-item__icon"
@@ -1145,6 +1172,7 @@
                           class="product-item__basket"
                           type="button"
                           aria-label="Добавить товар в корзину"
+                          title="Добавить в корзину"
                         >
                           <svg width="30" height="23">
                             <use xlink:href="img/sprite.svg#cart"></use>
@@ -1185,6 +1213,7 @@
                           class="product-item__favorite"
                           type="button"
                           aria-label="Добавить товар в избранное"
+                          title="Добавить в избранное"
                         >
                           <svg
                             class="product-item__icon"
@@ -1198,6 +1227,7 @@
                           class="product-item__basket"
                           type="button"
                           aria-label="Добавить товар в корзину"
+                          title="Добавить в корзину"
                         >
                           <svg width="30" height="23">
                             <use xlink:href="img/sprite.svg#cart"></use>
@@ -1249,6 +1279,7 @@
                           class="product-item__favorite"
                           type="button"
                           aria-label="Добавить товар в избранное"
+                          title="Добавить в избранное"
                         >
                           <svg
                             class="product-item__icon"
@@ -1262,6 +1293,7 @@
                           class="product-item__basket"
                           type="button"
                           aria-label="Добавить товар в корзину"
+                          title="Добавить в корзину"
                         >
                           <svg width="30" height="23">
                             <use xlink:href="img/sprite.svg#cart"></use>
@@ -1302,6 +1334,7 @@
                           class="product-item__favorite"
                           type="button"
                           aria-label="Добавить товар в избранное"
+                          title="Добавить в избранное"
                         >
                           <svg
                             class="product-item__icon"
@@ -1315,6 +1348,7 @@
                           class="product-item__basket"
                           type="button"
                           aria-label="Добавить товар в корзину"
+                          title="Добавить в корзину"
                         >
                           <svg width="30" height="23">
                             <use xlink:href="img/sprite.svg#cart"></use>
@@ -1353,6 +1387,7 @@
                           class="product-item__favorite"
                           type="button"
                           aria-label="Добавить товар в избранное"
+                          title="Добавить в избранное"
                         >
                           <svg
                             class="product-item__icon"
@@ -1366,6 +1401,7 @@
                           class="product-item__basket"
                           type="button"
                           aria-label="Добавить товар в корзину"
+                          title="Добавить в корзину"
                         >
                           <svg width="30" height="23">
                             <use xlink:href="img/sprite.svg#cart"></use>
@@ -1406,6 +1442,7 @@
                           class="product-item__favorite"
                           type="button"
                           aria-label="Добавить товар в избранное"
+                          title="Добавить в избранное"
                         >
                           <svg
                             class="product-item__icon"
@@ -1419,6 +1456,7 @@
                           class="product-item__basket"
                           type="button"
                           aria-label="Добавить товар в корзину"
+                          title="Добавить в корзину"
                         >
                           <svg width="30" height="23">
                             <use xlink:href="img/sprite.svg#cart"></use>
@@ -1459,6 +1497,7 @@
                           class="product-item__favorite"
                           type="button"
                           aria-label="Добавить товар в избранное"
+                          title="Добавить в избранное"
                         >
                           <svg
                             class="product-item__icon"
@@ -1472,6 +1511,7 @@
                           class="product-item__basket"
                           type="button"
                           aria-label="Добавить товар в корзину"
+                          title="Добавить в корзину"
                         >
                           <svg width="30" height="23">
                             <use xlink:href="img/sprite.svg#cart"></use>
@@ -1515,6 +1555,7 @@
                           class="product-item__favorite"
                           type="button"
                           aria-label="Добавить товар в избранное"
+                          title="Добавить в избранное"
                         >
                           <svg
                             class="product-item__icon"
@@ -1528,6 +1569,7 @@
                           class="product-item__basket"
                           type="button"
                           aria-label="Добавить товар в корзину"
+                          title="Добавить в корзину"
                         >
                           <svg width="30" height="23">
                             <use xlink:href="img/sprite.svg#cart"></use>
@@ -1572,6 +1614,7 @@
                           class="product-item__favorite"
                           type="button"
                           aria-label="Добавить товар в избранное"
+                          title="Добавить в избранное"
                         >
                           <svg
                             class="product-item__icon"
@@ -1585,6 +1628,7 @@
                           class="product-item__basket"
                           type="button"
                           aria-label="Добавить товар в корзину"
+                          title="Добавить в корзину"
                         >
                           <svg width="30" height="23">
                             <use xlink:href="img/sprite.svg#cart"></use>
@@ -1621,6 +1665,7 @@
                           class="product-item__favorite"
                           type="button"
                           aria-label="Добавить товар в избранное"
+                          title="Добавить в избранное"
                         >
                           <svg
                             class="product-item__icon"
@@ -1634,6 +1679,7 @@
                           class="product-item__basket"
                           type="button"
                           aria-label="Добавить товар в корзину"
+                          title="Добавить в корзину"
                         >
                           <svg width="30" height="23">
                             <use xlink:href="img/sprite.svg#cart"></use>
@@ -1672,6 +1718,7 @@
                           class="product-item__favorite"
                           type="button"
                           aria-label="Добавить товар в избранное"
+                          title="Добавить в избранное"
                         >
                           <svg
                             class="product-item__icon"
@@ -1685,6 +1732,7 @@
                           class="product-item__basket"
                           type="button"
                           aria-label="Добавить товар в корзину"
+                          title="Добавить в корзину"
                         >
                           <svg width="30" height="23">
                             <use xlink:href="img/sprite.svg#cart"></use>
@@ -1725,6 +1773,7 @@
                           class="product-item__favorite"
                           type="button"
                           aria-label="Добавить товар в избранное"
+                          title="Добавить в избранное"
                         >
                           <svg
                             class="product-item__icon"
@@ -1738,6 +1787,7 @@
                           class="product-item__basket"
                           type="button"
                           aria-label="Добавить товар в корзину"
+                          title="Добавить в корзину"
                         >
                           <svg width="30" height="23">
                             <use xlink:href="img/sprite.svg#cart"></use>

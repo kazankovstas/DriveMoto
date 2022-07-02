@@ -95,6 +95,15 @@
   .catalog {
     padding: 0 20px;
   }
+
+  // --------------------------------------- Delivery
+  .delivery__tabs-content {
+    padding: 0 20px;
+  }
+
+  .product-card__wrapper {
+    padding: 0 20px;
+  }
 }
 
 @media (max-width: 910px) {
@@ -111,6 +120,157 @@
     .catalog-item__bottom {
       padding: 0 10px;
     }
+  }
+}
+
+// --------------------------------------- Delivery
+@media (max-width: 890px) {
+  .tabs__content.tabs__content--active {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .delivery__top {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 20px;
+    margin-bottom: 40px;
+    background-color: transparent;
+  }
+
+  .delivery__item::before {
+    display: none;
+  }
+
+  .card__top {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .card__header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 120px;
+    margin: 0 20px 0 0;
+  }
+
+  .card__heading {
+    font-size: 18px;
+  }
+
+  .card__mode:not(:last-child) {
+    margin: 0;
+  }
+
+  .card__description {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 140px;
+    padding: 0;
+  }
+
+  .card__button-buy {
+    margin-left: -140px;
+    width: 280px;
+    height: 50px;
+    font-weight: 600;
+    font-size: 15px;
+  }
+
+  .card__description--hide {
+    display: none;
+  }
+
+  .card__top-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 40px;
+  }
+
+  .card__top-right {
+    padding: 8px 0;
+    border-bottom: 0.5px solid #c4c4c4;
+    width: 280px;
+  }
+
+  .card__label {
+    color: $black;
+    font-size: 16px;
+  }
+
+  .card__label-radio {
+    padding: 0;
+    width: 100%;
+    color: $black;
+    font-size: 16px;
+  }
+
+  .card__input-text {
+    width: 280px;
+    background-color: $white;
+    border: 0.5px solid #c4c4c4;
+    &::placeholder {
+      font-family: inherit;
+      color: #c4c4c4;
+      font-size: 15px;
+    }
+  }
+
+  .card__input-radio + .card__label-radio::before {
+    left: auto;
+    right: 0;
+  }
+
+  .card__input-radio:checked + .card__label-radio::after {
+    left: auto;
+    right: 3px;
+  }
+
+  // ------------------------------- Главная страница инпут с кнопкой поиска
+  .search__content-input {
+    border-radius: 0;
+  }
+
+  .search__content-button {
+    margin: 0;
+    font-size: 0;
+    line-height: 0;
+    border-radius: 0;
+    color: transparent;
+    background-color: $gray-bg;
+    background-image: url(../img/sprite/search.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    &:hover {
+      background-color: rgba($blue, 0.3);
+    }
+    &:active {
+      background-color: rgba($blue, 0.6);
+    }
+  }
+
+  // ------------------------------ Product-card
+  .product-card__wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .product-card__img-box {
+    order: 2;
+  }
+
+  .product-card__more,
+  .product-card__btn-buy {
+    display: none;
+  }
+
+  .product-card__button-mobile {
+    display: block;
   }
 }
 
@@ -228,8 +388,21 @@
     font-size: 14px;
   }
 
+  .catalog__filter {
+    justify-content: flex-start;
+  }
+
   .btn__filter-show {
     display: block;
+  }
+
+  // -------------------------------------- Product-card
+  .product-card__content {
+    padding: 0;
+  }
+
+  .product-card__title {
+    font-size: 21px;
   }
 }
 
@@ -250,6 +423,36 @@
   }
 }
 
+@media (max-width: 550px) {
+  // ------------------------------------ Product-Card
+  .product-card__tabs-container {
+    display: none;
+  }
+
+  .product-card__raiting-container {
+    margin: 0;
+  }
+
+  .product-card__img-box {
+    padding-top: 44px;
+  }
+
+  .product-card.page__section {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 420px) {
+  // ------------------------------------ catalog
+  .catalog__filter {
+    gap: 6px;
+  }
+
+  .select-css {
+    margin-right: 6px;
+  }
+}
+
 @media (max-width: 359px) {
   // --------------------------------- Banner
   .banner__slider-list {
@@ -259,38 +462,5 @@
   .banner__image {
     max-width: 320px;
     min-height: 164px;
-  }
-}
-
-@media (max-width: 420px) {
-  .search__content-input {
-    border-radius: 0;
-  }
-
-  .search__content-button {
-    margin: 0;
-    font-size: 0;
-    line-height: 0;
-    border-radius: 0;
-    color: transparent;
-    background-color: $gray-bg;
-    background-image: url(../img/sprite/search.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    &:hover {
-      background-color: rgba($blue, 0.3);
-    }
-    &:active {
-      background-color: rgba($blue, 0.6);
-    }
-  }
-
-  // ------------------------------------ catalog
-  .catalog__filter {
-    gap: 6px;
-  }
-
-  .select-css {
-    margin-right: 6px;
   }
 }
