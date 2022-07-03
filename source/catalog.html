@@ -252,7 +252,7 @@
         <section class="catalog page__section">
           <h2 class="catalog__title">Гидроциклы</h2>
           <div class="catalog__filter">
-            <div class="catalog__filter-item">
+            <div class="catalog__filter-item snaps-inline">
               <button
                 class="catalog__filt-btn"
                 type="button"
@@ -278,15 +278,12 @@
                 Spark
               </button>
             </div>
-            <div class="catalog__filter-show">
-              <button class="btn__filter-show" type="button" aria-label="Показать фильтр">
-                <svg width="26" height="26">
-                  <use xlink:href="img/sprite.svg#filter-show"></use>
-                </svg>
-              </button>
-            </div>
-
             <div class="catalog__filter-btn">
+                <button class="btn__filter-show" type="button" aria-label="Показать фильтр">
+                  <svg width="26" height="26">
+                    <use xlink:href="img/sprite.svg#filter-show"></use>
+                  </svg>
+                </button>
               <select class="select-css" name="" id="">
                 <option value="">По популярности</option>
                 <option value="">По стоимости</option>
@@ -429,6 +426,59 @@
                           /></label>
                         </p>
                       </div>
+                    </div>
+                  </fieldset>
+                  <!-- ---------------------------------------------- Select ----- Мощность двигателя -->
+                  <fieldset class="form__select">
+                    <p class="form__title">Мощность двигателя, л.с.</p>
+                    <div class="custom-select">
+                      <select>
+                        <option value="">90</option>
+                        <option value="">130</option>
+                        <option value="">154</option>
+                        <option value="">230</option>
+                        <option value="">300</option>
+                      </select>
+                      <span class="custom-arrow">
+                        <svg class="form__icon brand__icon" width="12" height="8">
+                          <use xlink:href="img/sprite.svg#arrow-down"></use>
+                        </svg>
+                      </span>
+                    </div>
+                  </fieldset>
+                  <!-- ---------------------------------------------- Select ----- Топливный бак, л. -->
+                  <fieldset class="form__select">
+                    <p class="form__title">Топливный бак, л.</p>
+                    <div class="custom-select">
+                      <select>
+                        <option value="">40</option>
+                        <option value="">50</option>
+                        <option value="">60</option>
+                        <option value="">70</option>
+                      </select>
+                      <span class="custom-arrow">
+                        <svg class="form__icon brand__icon" width="12" height="8">
+                          <use xlink:href="img/sprite.svg#arrow-down"></use>
+                        </svg>
+                      </span>
+                    </div>
+                  </fieldset>
+                  <!-- ---------------------------------------------- Select ----- Макс. скорость -->
+                  <fieldset class="form__select">
+                    <p class="form__title">Макс. скорость, км/ч</p>
+                    <div class="custom-select">
+                      <select>
+                        <option value="">84</option>
+                        <option value="">98</option>
+                        <option value="">126</option>
+                        <option value="">174</option>
+                        <option value="">188</option>
+                      </select>
+                      <span class="custom-arrow">
+                        <svg class="form__icon brand__icon" width="12" height="8">
+                          <use xlink:href="img/sprite.svg#arrow-down"></use>
+                        </svg>
+                      </span>
                     </div>
                   </fieldset>
                   <!-- ------------------------------------------- checkbox ------ Бренд -->

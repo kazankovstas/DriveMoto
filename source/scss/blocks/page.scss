@@ -4,7 +4,6 @@
   font-size: 14px;
   line-height: 1.193;
   font-family: "SF Pro Display", "Arial", sans-serif;
-  // overflow-x: hidden;
   scroll-behavior: smooth;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -33,4 +32,37 @@
 
 .page__section {
   margin-bottom: 80px;
+}
+
+// ---------------------------------------- Scrollbar
+::-webkit-scrollbar {
+  width: 0.8em;
+  height: 0.4em;
+}
+
+::-webkit-scrollbar-track {
+  background-color: $gray-bg;
+  border-radius: 100vw;
+  margin-block: 0.5em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $blue;
+  border: 0.25em solid rgba($blue, 0.4);
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba($blue, 0.8);
+}
+
+.products__tabs::-webkit-scrollbar,
+.catalog__filter-item::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.products__tabs::-webkit-scrollbar-track,
+.catalog__filter-item::-webkit-scrollbar-track {
+  background-color: transparent;
 }

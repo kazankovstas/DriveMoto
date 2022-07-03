@@ -410,3 +410,45 @@ label {
     border-color: #c4c4c4;
   }
 }
+
+// -------------------------------------- Custom-Select
+.form__select {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 12px 0;
+}
+
+.form__select > .form__title {
+  padding: 0;
+}
+
+.custom-select select {
+  font-family: inherit;
+  padding: 8px 32px 8px 18px;
+  background-color: $gray-bg;
+  color: $black;
+  border: 0;
+  outline: none;
+  width: 80px;
+  height: 33px;
+
+  appearance: none;
+}
+
+.custom-select {
+  position: relative;
+}
+
+.custom-arrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3b3c47;
+  height: 100%;
+  width: 20px;
+  pointer-events: none;
+}
