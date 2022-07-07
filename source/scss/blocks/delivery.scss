@@ -234,32 +234,13 @@
 }
 
 .card__button-buy {
-  display: inline-block;
-  align-self: flex-start;
-  padding: 10px 40px;
-  border: none;
+  @import "../global/mixin.scss";
+  @include button(10px 40px);
   border-radius: 3px;
-  background-color: $blue;
-  color: $white;
-  text-transform: uppercase;
+  align-self: flex-start;
   font-size: 13px;
   line-height: 1;
   letter-spacing: 0.12em;
-  transition: all 0.2s ease-in;
-  cursor: pointer;
-  &:hover {
-    background-color: rgba($blue, 0.8);
-  }
-  &:active {
-    background-color: $blue;
-    color: #7afa43;
-  }
-  &:focus-visible {
-    outline: none;
-    box-shadow: 0px 0px 8px#7afa43;
-    color: #7afa43;
-    border-radius: 8px;
-  }
 }
 
 .delivery__tabs-content {

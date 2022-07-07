@@ -89,11 +89,6 @@ $(function () {
       },
     ],
   });
-
-  // $(".form__drop-down").on("click", function () {
-  //   $(this).toggleClass("form__drop-down_active");
-  //   $(this).next(".form__content").slideToggle();
-  // });
 });
 
 // ------------------------------------------------------------------------------- Меню-бургер
